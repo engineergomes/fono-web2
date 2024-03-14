@@ -8,6 +8,8 @@ import { useContext, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 import { useWindow } from '@/hooks/useWindow';
 import { useUrl } from '@/providers/UrlProvider';
+import monkey from '/public/monkey.png';
+import lion from '/public/lion.png';
 
 export const Summary = () => {
   // const { currentUrl, setCurrentUrl } = useUrl();
@@ -24,31 +26,6 @@ export const Summary = () => {
   //   }
   // }, [inView, setCurrentUrl]);
 
-  const SummaryItem = (props: any) => {
-    return (
-      <>
-        <div className="grid grid-cols-1 grid-rows-auto items-center gap-y-5 sm:scroll-mt-80 scroll-mt-32 overflow-hidden">
-          <div className="h-40 sm:h-64 flex items-center justify-center w-full">
-            <Image
-              className="object-cover"
-              src={props.data.src}
-              width={props.data.width}
-              height={props.data.height}
-              alt="Ana Nascimento"
-            ></Image>
-          </div>
-          <h2 className="text-3xl text-center">{props.data.title}</h2>
-          {/* <p className="text-center w-3/4 font-semibold text-lg mx-auto">{props.data.text}</p> */}
-          <Link href="#servicos" className="mx-auto">
-            <p className="text-xl flex gap-x-[2.5px] items-center">
-              Saiba mais
-              <ArrowRight className="" size={20} />
-            </p>
-          </Link>
-        </div>
-      </>
-    );
-  };
   return (
     <div
       className="bg-white bg-paper w-full relative z-[5] py-16 lg:py-20 scroll-mt-20 shadow-lg text-black  font-light flex flex-col gap-y-10"
@@ -98,7 +75,7 @@ export const Summary = () => {
             height: isMobile ? 200 : 200,
             title: 'Avaliação Fonoaudiológica',
             text: 'Programas de terapia personalizados para atender às necessidades individuais de cada criança.',
-            src: '/lion.png',
+            src: lion,
           }}
         />
         <SummaryItem
@@ -107,10 +84,30 @@ export const Summary = () => {
             height: isMobile ? 200 : 220,
             title: 'Terapia Fonoaudiológica',
             text: 'Terapia focada no desenvolvimento das habilidades de comunicação social em crianças.',
-            src: '/monkey.png',
+            src: monkey,
           }}
         />
       </Container>
     </div>
+  );
+};
+
+const SummaryItem = (props: any) => {
+  return (
+    <>
+      <div className="grid grid-cols-1 grid-rows-auto items-center gap-y-5 sm:scroll-mt-80 scroll-mt-32 overflow-hidden justify-center">
+        <div className="h-40 sm:h-64  items-center justify-center relative aspect-square">
+          <Image src={props.data.src} alt="Ana Nascimento" fill />
+        </div>
+        <h2 className="text-3xl text-center">{props.data.title}</h2>
+        {/* <p className="text-center w-3/4 font-semibold text-lg mx-auto">{props.data.text}</p> */}
+        <Link href="#servicos" className="mx-auto">
+          <p className="text-xl flex gap-x-[2.5px] items-center">
+            Saiba mais
+            <ArrowRight className="" size={20} />
+          </p>
+        </Link>
+      </div>
+    </>
   );
 };
