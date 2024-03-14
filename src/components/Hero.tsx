@@ -40,7 +40,7 @@ export const Hero = () => {
             </h2>{' '}
           </Link>
         </div>
-        <div className="mt-14 h-80 lg:h-96 relative aspect-square">
+        <div className="mt-14 rounded-3xl shadow-md overflow-hidden">
           {/* PLACEHOLDER */}
 
           <Image
@@ -50,8 +50,7 @@ export const Hero = () => {
             alt="hero"
             width={500}
             height={500}
-            className="rounded-3xl shadow-md"
-            quality={80}
+            quality={75}
             layout="responsive"
             priority
           ></Image>
