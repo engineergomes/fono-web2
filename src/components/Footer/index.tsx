@@ -3,38 +3,18 @@ import Container from '../Container';
 import Link from 'next/link';
 import InstagramIcon from '@/assets/InstagramIcon';
 import WhatsIcon from '@/assets/WhatsIcon';
-import { useInView } from 'react-intersection-observer';
-import { useEffect } from 'react';
-import { useUrl } from '@/providers/UrlProvider';
 
 export default function Footer() {
-  // const { ref, inView, entry } = useInView({
-  //   /* Optional options */
-  //   threshold: 0.3,
-  // });
-
-  // const { currentUrl, setCurrentUrl } = useUrl();
-
-  // useEffect(() => {
-  //   if (inView) {
-  //     setCurrentUrl('#contato');
-  //   }
-  // }, [inView, setCurrentUrl]);
-
   return (
     <>
       <div
         id="contato"
         className="w-full bg-lightGreen bg-paper relative text-sm sm:pt-0 pt-6 h-[110%] text-blue-950 shadow-md"
-        // ref={ref}
       >
-        {/* hidden added to mobile due to horizontal line. Not a definitive solution */}
-
         <Container>
           <div className="flex flex-col md:grid grid-cols-1  md:grid-cols-3 w-full justify-center items-center gap-x-4 gap-y-8">
             <div className="flex flex-col items-center justify-center lg:justify-start lg:items-start gap-y-4 sm:gap-y-8">
-              <Image src="/logo-full-text-black.png" alt="Logo" width={350} height={200} />
-              {/* <Image src="/logo.png" alt="Logo" width={100} height={100} /> */}
+              <Image src="/logo-full-text-black.webp" alt="Logo" width={350} height={200} />
             </div>
             <div className="flex flex-col items-center justify-center lg:justify-start lg:items-start gap-y-3 sm:gap-y-4 w-full">
               <h2 className="font-semibold text-xl">Contatos</h2>
@@ -47,7 +27,7 @@ export default function Footer() {
                   target="_blank"
                 >
                   <Image
-                    src={'/location-icon.png'}
+                    src={'/location-icon.webp'}
                     alt={''}
                     width={26}
                     height={26}
@@ -57,7 +37,6 @@ export default function Footer() {
                     R. Guilherme Dancker, 131 - Centro, Jaraguá do Sul - SC, 89251-460
                   </p>
                 </Link>
-                {/* replaced Link componente with a tag due to bug. Link component is not really necessary here since page is not being reloaded. */}
                 <a
                   className="flex gap-5 items-center justify-start group"
                   href={'tel:+554799777-5008'}
@@ -65,7 +44,7 @@ export default function Footer() {
                   rel="noreferer"
                 >
                   <Image
-                    src={'/phone-icon.png'}
+                    src={'/phone-icon.webp'}
                     alt={''}
                     width={36}
                     height={36}
@@ -73,7 +52,6 @@ export default function Footer() {
                   />
                   <p className="text-sm">+55 47 99777-5008</p>
                 </a>
-                {/* replaced Link componente with a tag due to bug. Link component is not really necessary here since page is not being reloaded. */}
                 <a
                   className="flex gap-5 items-center justify-start group"
                   href="mailto:analigiaanascimento@gmail.com"
@@ -81,7 +59,7 @@ export default function Footer() {
                   rel="noreferer"
                 >
                   <Image
-                    src={'/mail-icon.png'}
+                    src={'/mail-icon.webp'}
                     alt={''}
                     width={36}
                     height={36}

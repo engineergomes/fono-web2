@@ -1,4 +1,4 @@
-import { useContext, useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { ServicesInfo } from './ServicesInfo';
 import { ServicesType, services } from './data';
 import { Transition } from '@headlessui/react';
@@ -21,7 +21,6 @@ export const Desktop = () => {
   const serviceRef = useRef<ServicesType>('linguagem');
 
   const { ref, inView, entry } = useInView({
-    /* Optional options */
     threshold: 0.5,
   });
 

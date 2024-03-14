@@ -4,25 +4,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowRight } from 'phosphor-react-sc';
 import Container from './Container';
-import { useContext, useEffect } from 'react';
-import { useInView } from 'react-intersection-observer';
 import { useWindow } from '@/hooks/useWindow';
-import { useUrl } from '@/providers/UrlProvider';
 
 export const Summary = () => {
-  // const { currentUrl, setCurrentUrl } = useUrl();
   const { isMobile } = useWindow();
-
-  // const { ref, inView, entry } = useInView({
-  //   /* Optional options */
-  //   threshold: 0.35,
-  // });
-
-  // useEffect(() => {
-  //   if (inView) {
-  //     setCurrentUrl('#sobre');
-  //   }
-  // }, [inView, setCurrentUrl]);
 
   const SummaryItem = (props: any) => {
     return (
@@ -38,7 +23,6 @@ export const Summary = () => {
             ></Image>
           </div>
           <h2 className="text-3xl text-center">{props.data.title}</h2>
-          {/* <p className="text-center w-3/4 font-semibold text-lg mx-auto">{props.data.text}</p> */}
           <Link href="#servicos" className="mx-auto">
             <p className="text-xl flex gap-x-[2.5px] items-center">
               Saiba mais
@@ -53,7 +37,6 @@ export const Summary = () => {
     <div
       className="bg-white bg-paper w-full relative z-[5] py-16 lg:py-20 scroll-mt-20 shadow-lg text-black  font-light flex flex-col gap-y-10"
       id="sobre"
-      // ref={ref}
     >
       <div className="flex flex-col items-center gap-y-10 justify-center">
         <h2 className="sm:text-7xl text-4xl font-medium">Sobre mim:</h2>
@@ -83,13 +66,6 @@ export const Summary = () => {
             fonoaudiológica seja algo leve para os pais e pacientes.
           </p>
         </div>
-
-        {/* NA VERSÃO MOBILE ESTE PARÁGRAFO ABAIXO NÃO APARECE */}
-        {/* <p className="sm:w-1/2 text-lg w-[90%] sm:text-2xl leading-10 hidden sm:block">
-          Minha abordagem respeita a individualidade de cada criança, criando um espaço onde elas se expressam à
-          vontade. Meu trabalho com crianças acontece de forma lúdica e envolvente, fazendo com que tratamento seja algo
-          leve para os pais e pacientes.
-        </p> */}
       </div>
       <Container className="sm:flex-row flex flex-col items-center justify-around gap-y-14 gap-x-8">
         <SummaryItem

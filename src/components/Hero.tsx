@@ -1,28 +1,11 @@
 'use client';
-import { useUrl } from '@/providers/UrlProvider';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useEffect } from 'react';
-import { useInView } from 'react-intersection-observer';
 
 export const Hero = () => {
-  // const { ref, inView, entry } = useInView({
-  //   /* Optional options */
-  //   threshold: 0.5,
-  // });
-
-  // const { currentUrl, setCurrentUrl } = useUrl();
-
-  // useEffect(() => {
-  //   if (inView) {
-  //     setCurrentUrl('#inicio');
-  //   }
-  // }, [inView, setCurrentUrl]);
-
   return (
     <>
       <div
-        // ref={ref}
         id="inicio"
         className="w-full flex flex-col md:flex-row sm:justify-center items-center scroll-mt-48
       sm:scroll-mt-36 gap-x-7 pb-20 md:pb-32 font-semibold relative z-[6] bg-lightPurple bg-paper p-10 shadow-lg"

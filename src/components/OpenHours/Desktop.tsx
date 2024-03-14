@@ -1,35 +1,18 @@
-import { useUrl } from '@/providers/UrlProvider';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useContext, useEffect } from 'react';
-import { useInView } from 'react-intersection-observer';
 
 export const Desktop = () => {
-  // const { currentUrl, setCurrentUrl } = useUrl();
-
-  // const { ref, inView, entry } = useInView({
-  //   /* Optional options */
-  //   threshold: 0.51,
-  // });
-
-  // useEffect(() => {
-  //   if (inView) {
-  //     setCurrentUrl('#horarios');
-  //   }
-  // }, [inView, setCurrentUrl]);
-
   return (
     <>
       <div
         id="horarios"
         className="bg-lightPurple bg-paper w-screen pt-20 pb-24 justify-center grid grid-cols-2 gap-x-16 relative px-10 shadow-lg z-[4]"
-        // ref={ref}
       >
         <div className="flex h-full w-full items-center justify-center">
           <div className="relative">
             <Image
               className="rounded-3xl -scale-x-100 z-0 shadow-md"
-              src="/1.jpg"
+              src="/1.webp"
               width={700}
               height={700}
               alt="services"

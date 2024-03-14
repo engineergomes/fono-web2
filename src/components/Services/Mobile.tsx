@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { services } from './data';
 import { useInView } from 'react-intersection-observer';
 import { useUrl } from '@/providers/UrlProvider';
-import { useContext, useEffect } from 'react';
+import { useEffect } from 'react';
 import React from 'react';
 
 export const Mobile = () => {

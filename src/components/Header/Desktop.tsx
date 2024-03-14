@@ -1,37 +1,24 @@
-import { Fragment, useContext } from 'react';
-
+import { Fragment } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { navigation } from './navigation';
-import { useUrl } from '@/providers/UrlProvider';
 import InstagramIcon from '@/assets/InstagramIcon';
 import { Menu, Transition } from '@headlessui/react';
 import { CaretDown } from 'phosphor-react-sc';
 import WhatsIcon from '@/assets/WhatsIcon';
 
 export const Desktop = () => {
-  // const { currentUrl, setCurrentUrl } = useUrl();
-
   return (
     <div className="items-center justify-between flex font-bold gap-x-8 px-5">
       <div>
         <Link href="">
-          <Image src={'/logo-full-text-black.png'} alt={'logo'} width={350} height={100} />
+          <Image src={'/logo-full-text-black.webp'} alt={'logo'} width={350} height={100} />
         </Link>
       </div>
       {navigation.map((item) => {
         if (item.href !== '#sobre') {
           return (
-            <div
-              key={item.href}
-              className={
-                `flex gap-4 cursor-pointer border-b-2 hover:border-lightPurple text-xl`
-                //  ${
-                //   currentUrl === item.href ? 'border-lightPurple' : 'border-transparent'
-                // }
-                // `
-              }
-            >
+            <div key={item.href} className={`flex gap-4 cursor-pointer border-b-2 hover:border-lightPurple text-xl`}>
               <Link href={item.href} className="px-3 py-1">
                 <p className="text-lightPurple whitespace-nowrap">{item.name}</p>
               </Link>
@@ -40,16 +27,7 @@ export const Desktop = () => {
         } else {
           return (
             <Menu as="div" className="relative" key={item.href}>
-              <div
-                key={item.href}
-                className={
-                  `flex gap-4 cursor-pointer border-b-2 hover:border-lightPurple text-xl`
-
-                  // ` ${
-                  //   currentUrl === item.href || currentUrl === '#horarios' ? 'border-lightPurple' : 'border-transparent'
-                  // }`
-                }
-              >
+              <div key={item.href} className={`flex gap-4 cursor-pointer border-b-2 hover:border-lightPurple text-xl`}>
                 <Menu.Button className="flex">
                   <p className="text-lightPurple whitespace-nowrap">{item.name}</p>
                   <CaretDown size={20} weight="fill" className="self-center fill-lightPurple" />
@@ -76,7 +54,6 @@ export const Desktop = () => {
                             active ? 'bg-lightPurple text-white' : 'text-lightPurple'
                           } group flex w-full items-center rounded-md px-2 py-2 text-xl transition-all`}
                         >
-                          {/* {active ? <div></div> : <div></div>} */}
                           Sobre mim
                         </button>
                       </Link>
@@ -90,7 +67,6 @@ export const Desktop = () => {
                             active ? 'bg-lightPurple text-white' : 'text-lightPurple'
                           } group flex w-full items-center rounded-md px-2 py-2 text-xl transition-all`}
                         >
-                          {/* {active ? <div></div> : <div></div>} */}
                           Horários
                         </button>
                       </Link>

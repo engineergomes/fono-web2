@@ -7,7 +7,7 @@ export const services = {
     firstListItem: 'Processo diagnóstico ',
     secondListItem: 'Avaliação Clínica',
     thirdListItem: 'Utilização de protocolos validados',
-    image: '/3.jpg',
+    image: '/3.webp',
   },
   social: {
     order: 2,
@@ -17,18 +17,8 @@ export const services = {
     firstListItem: 'Planejamento de Intervenção Individual',
     secondListItem: 'Apoio e orientação para os pais',
     thirdListItem: 'Atendimentos interativos e lúdicos',
-    image: '/1.jpg',
+    image: '/1.webp',
   },
-  // ocupacional: {
-  //   order: 3,
-  //   name: 'Terapia Ocupacional',
-  //   title: 'Superando os desafios de forma saudável',
-  //   text: 'A Terapia Ocupacional auxilia as crianças a dominar as habilidades necessárias para uma vida diária bem-sucedida, como comer, tomar banho, vestir-se e escrever.',
-  //   firstListItem: 'Desenvolver Força',
-  //   secondListItem: 'Amplitude de Movimento',
-  //   thirdListItem: 'Marcos de Desenvolvimento',
-  //   image: '/3.jpg',
-  // },
 };
 
 export type ServicesType = keyof typeof services;

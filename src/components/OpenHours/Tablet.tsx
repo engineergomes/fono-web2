@@ -1,7 +1,7 @@
 import { useUrl } from '@/providers/UrlProvider';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useContext, useEffect } from 'react';
+import { useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
 
 export const Tablet = () => {
@@ -55,7 +55,7 @@ export const Tablet = () => {
             </div>
           </div>
         </div>
-        <Image className="rounded-3xl -scale-x-100" src="/1.jpg" width={550} height={500} alt="services" />
+        <Image className="rounded-3xl -scale-x-100" src="/1.webp" width={550} height={500} alt="services" />
         <div className="text-darkBlue font-semibold w-full max-w-xl [&>div]:text-5xl [&>div]:w-fit [&>div]:px-3 gap-y-2 flex flex-col">
           <div className="bg-lightYellow">Espaço Ana Nascimento</div>
           <div className="bg-lightPurple">Desenvolvimento</div>

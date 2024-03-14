@@ -1,28 +1,12 @@
-import { useUrl } from '@/providers/UrlProvider';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useContext, useEffect } from 'react';
-import { useInView } from 'react-intersection-observer';
 
 export const Mobile = () => {
-  // const { currentUrl, setCurrentUrl } = useUrl();
-
-  // const { ref, inView, entry } = useInView({
-  //   /* Optional options */
-  //   threshold: 0.51,
-  // });
-
-  // useEffect(() => {
-  //   if (inView) {
-  //     setCurrentUrl('#horarios');
-  //   }
-  // }, [inView, setCurrentUrl]);
   return (
     <>
       <div
         id="horarios"
         className="bg-lightPurple bg-paper w-full py-16 justify-center flex flex-col items-center gap-y-14 px-5 scroll-m-20"
-        // ref={ref}
       >
         <div className="text-darkBlue font-semibold [&>*]:px-3 gap-y-2 flex flex-col sm:justify-center sm:w-full sm:items-center">
           <div className="text-2xl sm:text-5xl bg-lightYellow whitespace-nowrap bg-paper w-[95%]">Fonoaudióloga</div>
@@ -34,7 +18,7 @@ export const Mobile = () => {
             adequado e acolhedor para o atendimento de crianças e suas famílias.
           </p>
         </div>
-        <Image className="rounded-3xl -scale-x-100" src="/1.jpg" width={500} height={500} alt="services" />
+        <Image className="rounded-3xl -scale-x-100" src="/1.webp" width={500} height={500} alt="services" />
         <div className="max-w-[500px] flex flex-col p-4 bg-lightBlue rounded-2xl items-center justify-center">
           <div className="border-2 p-5 border-dashed bg-lightBlue rounded-2xl flex flex-col gap-y-2">
             <h2 className="text-center text-2xl font-semibold">Horários</h2>

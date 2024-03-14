@@ -1,6 +1,6 @@
 import { Popover, Transition } from '@headlessui/react';
 import Link from 'next/link';
-import { Fragment, useContext, useState } from 'react';
+import { Fragment, useState } from 'react';
 import { navigation } from './navigation';
 import { List, X } from 'phosphor-react-sc';
 import Image from 'next/image';
@@ -18,7 +18,7 @@ export const Mobile = () => {
       <Popover as={React.Fragment}>
         <div className="flex w-full justify-between items-center h-16">
           <Link className="px-4" href="/">
-            <Image src={'/logo-full-text-black.png'} alt={'logo'} width={300} height={70} />
+            <Image src={'/logo-full-text-black.webp'} alt={'logo'} width={300} height={70} />
           </Link>
           <Popover.Button className={`h-full  px-4`} /* onClick={() => setScrollDisabled(true)} */>
             <List className="w-8 h-8" />
@@ -38,7 +38,7 @@ export const Mobile = () => {
               <div className="flex w-full items-center justify-between z-50">
                 <Link href="/" className="px-4">
                   <Popover.Button>
-                    <Image src={'/logo-full-text-black.png'} alt={'logo'} width={260} height={70} />
+                    <Image src={'/logo-full-text-black.webp'} alt={'logo'} width={260} height={70} />
                   </Popover.Button>
                 </Link>
 
