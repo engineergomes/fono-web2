@@ -50,7 +50,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html className="scroll-smooth">
       <body className=" scroll-smooth w-screen overflow-x-hidden pt-20 lg:pt-24">{children}</body>
-      <Script id="schema" type="application/ld+json">
+      <Script id="schema" type="application/ld+json" defer>
         {`
   "@context": "http://schema.org",
   "@type": "ProfessionalService",

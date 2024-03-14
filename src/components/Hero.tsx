@@ -47,10 +47,13 @@ export const Hero = () => {
             // className="rounded-3xl max-w-[600px]"
             // max-w-[300px] md:max-w-none min-w-[210px]
             src="/4.jpg"
-            fill
             alt="hero"
+            width={500}
+            height={500}
             className="rounded-3xl shadow-md"
             quality={80}
+            layout="responsive"
+            priority
           ></Image>
         </div>
       </div>
