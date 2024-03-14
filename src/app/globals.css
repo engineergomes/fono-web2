@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 body {
-  font-family: 'montserrat', sans-serif;
+  font-family: var(--font-montserrat);
   background-image: url('/clean-gray-paper.webp');
   background-color: #fff;
   /* font-weight: 900;   esse estilo aqui aplica o font weight para todo o projeto */

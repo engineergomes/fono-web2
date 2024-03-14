@@ -51,7 +51,7 @@ export const Summary = () => {
   };
   return (
     <div
-      className="bg-white bg-paper w-full relative z-[5] py-16 lg:py-20 scroll-mt-20 shadow-lg text-black font-[montserrat] font-light flex flex-col gap-y-10"
+      className="bg-white bg-paper w-full relative z-[5] py-16 lg:py-20 scroll-mt-20 shadow-lg text-black  font-light flex flex-col gap-y-10"
       id="sobre"
       // ref={ref}
     >

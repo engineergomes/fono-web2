@@ -10,7 +10,7 @@ import UrlProvider from '@/providers/UrlProvider';
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-center font-montserrat scroll-smooth">
+    <main className="flex flex-col items-center justify-center  scroll-smooth">
       <UrlProvider>
         <Header />
         <Hero />
