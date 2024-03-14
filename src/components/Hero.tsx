@@ -40,14 +40,14 @@ export const Hero = () => {
             </h2>{' '}
           </Link>
         </div>
-        <div className="mt-14">
+        <div className="mt-14 h-96 relative aspect-square">
           {/* PLACEHOLDER */}
+
           <Image
             // className="rounded-3xl max-w-[600px]"
             // max-w-[300px] md:max-w-none min-w-[210px]
             src="/4.jpg"
-            width={500}
-            height={300}
+            fill
             alt="hero"
             className="rounded-3xl shadow-md"
           ></Image>
