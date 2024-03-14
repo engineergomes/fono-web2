@@ -50,6 +50,7 @@ export const Hero = () => {
             fill
             alt="hero"
             className="rounded-3xl shadow-md"
+            quality={80}
           ></Image>
         </div>
       </div>
