@@ -15,7 +15,6 @@ const config: Config = {
       fontFamily: {
         archivo: ['Archivo', 'sans-serif'],
         hindVadodara: ['Hind Vadodara', 'sans-serif'],
-        nunito: ['Nunito', 'sans-serif'],
       },
       backgroundColor: {
         lightBlue: '#45B3DF',
