@@ -6,7 +6,7 @@
 
 body {
   font-family: 'montserrat', sans-serif;
-  background-image: url('https://www.transparenttextures.com/patterns/clean-gray-paper.png');
+  background-image: url('/clean-gray-paper.webp');
   background-color: #fff;
   /* font-weight: 900;   esse estilo aqui aplica o font weight para todo o projeto */
 }
@@ -16,7 +16,7 @@ html {
   --scroll-behavior: smooth !important;
   color: #fff;
   background-color: #fff;
-  background-image: url('https://www.transparenttextures.com/patterns/clean-gray-paper.png');
+  background-image: url('/clean-gray-paper.webp');
 }
 
 .swiper {
@@ -50,5 +50,5 @@ html {
 }
 
 .bg-paper {
-  background-image: url('https://www.transparenttextures.com/patterns/clean-gray-paper.png');
+  background-image: url('/clean-gray-paper.webp');
 }
