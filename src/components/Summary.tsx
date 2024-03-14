@@ -74,7 +74,7 @@ export const Summary = () => {
             height: isMobile ? 200 : 200,
             title: 'Avaliação Fonoaudiológica',
             text: 'Programas de terapia personalizados para atender às necessidades individuais de cada criança.',
-            src: '/lion.png',
+            src: '/lion.webp',
           }}
         />
         <SummaryItem
@@ -83,7 +83,7 @@ export const Summary = () => {
             height: isMobile ? 200 : 220,
             title: 'Terapia Fonoaudiológica',
             text: 'Terapia focada no desenvolvimento das habilidades de comunicação social em crianças.',
-            src: '/monkey.png',
+            src: '/monkey.webp',
           }}
         />
       </Container>
