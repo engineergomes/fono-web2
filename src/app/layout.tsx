@@ -49,10 +49,6 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html className="scroll-smooth">
-      <Head>
-        <link rel="canonical" href="https://www.fonoana.com.br/" />
-        <link rel="icon" />
-      </Head>
       <body className=" scroll-smooth w-screen overflow-x-hidden pt-20 lg:pt-24">{children}</body>
       <Script id="schema" type="application/ld+json">
         {`
