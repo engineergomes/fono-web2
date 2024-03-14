@@ -40,7 +40,7 @@ export const Hero = () => {
             </h2>{' '}
           </Link>
         </div>
-        <div className="mt-14 h-96 relative aspect-square">
+        <div className="mt-14 h-80 lg:h-96 relative aspect-square">
           {/* PLACEHOLDER */}
 
           <Image
