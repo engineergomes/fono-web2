@@ -46,7 +46,7 @@ export const Hero = () => {
           <Image
             // className="rounded-3xl max-w-[600px]"
             // max-w-[300px] md:max-w-none min-w-[210px]
-            src="/4.jpg"
+            src="/4.webp"
             alt="hero"
             width={500}
             height={500}

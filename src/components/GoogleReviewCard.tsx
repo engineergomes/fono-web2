@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
@@ -23,7 +24,7 @@ const GoogleReviewCard = ({ review }: GoogleReviewCardProps) => {
     >
       <div className="flex items-center mb-2">
         <div className="rounded-full mr-2 w-14 h-14">
-          <img
+          <Image
             src={review.profile_photo_url}
             alt={review.author_name}
             width={56}
