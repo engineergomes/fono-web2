@@ -19,7 +19,7 @@ export const Desktop = () => {
             />
 
             <div className="max-w-xs flex flex-col p-3 bg-lightBlue rounded-2xl absolute lg:-bottom-10 lg:-right-10 xl:-right-10 bg-paper shadow-md">
-              <div className="border-2 p-5 border-dashed bg-lightBlue rounded-2xl flex flex-col gap-y-2 bg-paper">
+              <div className="border-2 p-5 border-dashed bg-lightBlue rounded-2xl flex flex-col gap-y-2 bg-paper text-darkBlue">
                 <h2 className="text-center text-2xl font-semibold">Horários</h2>
                 <div className=" gap-y-2 w-full min-w-[10rem] flex flex-col items-center justify-center">
                   <p className="flex-nowrap whitespace-nowrap">Segunda a Sexta</p>
