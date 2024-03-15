@@ -20,10 +20,10 @@ export const Mobile = () => {
         </div>
         <Image className="rounded-3xl -scale-x-100" src="/1.webp" width={500} height={500} alt="services" />
         <div className="max-w-[500px] flex flex-col p-4 bg-lightBlue rounded-2xl items-center justify-center">
-          <div className="border-2 p-5 border-dashed bg-lightBlue rounded-2xl flex flex-col gap-y-2">
+          <div className="border-2 p-5 border-dashed bg-lightBlue rounded-2xl flex flex-col gap-y-2 text-darkBlue">
             <h2 className="text-center text-2xl font-semibold">Horários</h2>
             <div className=" gap-y-2 w-full min-w-[10rem] flex flex-col items-center justify-center">
-              <p className="flex-nowrap whitespace-nowrap">Seguda a Sexta</p>
+              <p className="flex-nowrap whitespace-nowrap">Segunda a Sexta</p>
 
               <p className="flex-nowrap whitespace-nowrap text-center">Das 8h às 18h30</p>
             </div>

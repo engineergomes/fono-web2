@@ -1,4 +1,10 @@
-export default function WhatsIcon(props: React.SVGProps<SVGSVGElement>) {
+import React from 'react';
+
+interface WhatsIconProps extends React.SVGProps<SVGSVGElement> {
+  alt?: string;
+}
+
+const WhatsIcon: React.FC<WhatsIconProps> = ({ alt, ...props }) => {
   return (
     <svg viewBox="0 0 35 36" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
       <rect y="0.669922" width="35" height="35" rx="17.5" fill="#25D366" />
@@ -8,4 +14,6 @@ export default function WhatsIcon(props: React.SVGProps<SVGSVGElement>) {
       />
     </svg>
   );
-}
+};
+
+export default WhatsIcon;

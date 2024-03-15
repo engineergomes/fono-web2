@@ -1,4 +1,10 @@
-export default function InstagramIcon(props: React.SVGProps<SVGSVGElement>) {
+import React from 'react';
+
+interface InstagramIconProps extends React.SVGProps<SVGSVGElement> {
+  alt?: string;
+}
+
+const InstagramIcon: React.FC<InstagramIconProps> = ({ alt, ...props }) => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 36" fill="none" {...props}>
       <rect y="0.669922" width="35" height="35" rx="17.5" fill="#9E3894" />
@@ -8,4 +14,6 @@ export default function InstagramIcon(props: React.SVGProps<SVGSVGElement>) {
       />
     </svg>
   );
-}
+};
+
+export default InstagramIcon;

@@ -75,7 +75,7 @@ export default function Footer() {
                   href={'https://www.instagram.com/fonoananascimento/'}
                   className="rounded-full transition-all hover:shadow-lg hover:brightness-105"
                 >
-                  <InstagramIcon className="w-10" />
+                  <InstagramIcon className="w-10" alt="Instagram" />
                 </Link>
                 <Link
                   target="_blank"
@@ -83,7 +83,7 @@ export default function Footer() {
                   href={'https://wa.me/5547997775008'}
                   className="cta-button rounded-full transition-all hover:shadow-lg hover:brightness-105"
                 >
-                  <WhatsIcon className="w-10" />
+                  <WhatsIcon className="w-10" alt="Whatsapp" />
                 </Link>
               </div>
             </div>
@@ -92,7 +92,7 @@ export default function Footer() {
                 <div className="border-2 p-5 border-dashed bg-lightBlue rounded-2xl flex flex-col gap-y-2 bg-paper">
                   <h2 className="text-center text-2xl font-semibold">Horários</h2>
                   <div className=" gap-y-2 w-full min-w-[10rem] flex flex-col items-center justify-center">
-                    <p className="flex-nowrap whitespace-nowrap">Seguda a Sexta</p>
+                    <p className="flex-nowrap whitespace-nowrap">Segunda a Sexta</p>
 
                     <p className="flex-nowrap whitespace-nowrap text-center">Das 8h às 18h30</p>
                   </div>

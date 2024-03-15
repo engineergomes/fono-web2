@@ -20,7 +20,7 @@ export const Mobile = () => {
           <Link className="px-4" href="/">
             <Image src={'/logo-full-text-black.webp'} alt={'logo'} width={300} height={70} />
           </Link>
-          <Popover.Button className={`h-full  px-4`} /* onClick={() => setScrollDisabled(true)} */>
+          <Popover.Button className={`h-full px-4`}>
             <List className="w-8 h-8" />
           </Popover.Button>
         </div>
@@ -54,7 +54,6 @@ export const Mobile = () => {
                         className={`text-xl font-semibold flex items-center justify-center py-4 w-full px-20 
                           ${item.href === currentUrl ? 'bg-lightPurple bg-paper rounded-full' : 'text-lightPurple'}
                         `}
-                        // onClick={() => setScrollDisabled(false)}
                       >
                         {item.name}
                       </Popover.Button>

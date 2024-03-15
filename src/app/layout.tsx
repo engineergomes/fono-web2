@@ -1,7 +1,6 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { Montserrat } from 'next/font/google';
-import Head from 'next/head';
 import Script from 'next/script';
 
 const montserrat = Montserrat({
@@ -51,7 +50,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html className={`scroll-smooth ${montserrat.variable}`}>
+    <html className={`scroll-smooth ${montserrat.variable}`} lang="pt_BR">
       <body className="scroll-smooth w-screen overflow-x-hidden pt-20 lg:pt-24">{children}</body>
       <Script id="schema" type="application/ld+json" defer>
         {`

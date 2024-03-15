@@ -22,7 +22,7 @@ export const Desktop = () => {
               <div className="border-2 p-5 border-dashed bg-lightBlue rounded-2xl flex flex-col gap-y-2 bg-paper">
                 <h2 className="text-center text-2xl font-semibold">Horários</h2>
                 <div className=" gap-y-2 w-full min-w-[10rem] flex flex-col items-center justify-center">
-                  <p className="flex-nowrap whitespace-nowrap">Seguda a Sexta</p>
+                  <p className="flex-nowrap whitespace-nowrap">Segunda a Sexta</p>
 
                   <p className="flex-nowrap whitespace-nowrap text-center">Das 8h às 18h30</p>
                 </div>
