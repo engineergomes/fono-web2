@@ -69,6 +69,7 @@ export const Summary = () => {
       </div>
       <Container className="sm:flex-row flex flex-col items-center justify-around gap-y-14 gap-x-8">
         <SummaryItem
+          alt={'Avaliação Fonoaudiológica'}
           data={{
             width: isMobile ? 200 : 300,
             height: isMobile ? 200 : 200,
@@ -78,6 +79,7 @@ export const Summary = () => {
           }}
         />
         <SummaryItem
+          alt={'Terapia Fonoaudiológica'}
           data={{
             width: isMobile ? 200 : 300,
             height: isMobile ? 200 : 220,
