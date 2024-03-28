@@ -65,6 +65,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             content: conteudo,
           },
         });
+        res.status(200).json('Post enviado com sucesso.');
       } catch (error) {
         console.log(error);
       } finally {
