@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useForm } from 'react-hook-form';
 import ReactMarkdown from 'react-markdown';
@@ -9,20 +9,8 @@ type Inputs = {
   titulo: string;
   conteudo: string;
 };
-export default function CreatePost() {
-  const [submitting, setSubmitting] = useState(false);
-  const [successMessage, setSuccessMessage] = useState('');
-  const [preview, setPreview] = useState('');
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { errors },
-  } = useForm<Inputs>();
 
-  // Definindo o valor inicial do textarea
-  useEffect(() => {
-    const initialContent = `# Título Principal
+const initialContent = `# Título Principal
 ## Subtítulo
 - Lista
 - *Itálico*: *texto*
@@ -30,8 +18,20 @@ export default function CreatePost() {
 - Links: [texto do link](url)
 - Imagens: ![texto alternativo](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.FrpUgxPv3Rp4f7nDh5pooAHaFj%26pid%3DApi&f=1&ipt=21317bc2345010adb9fa5fa5a09e58d69b72df484713c2737c2439cf23db9cc5&ipo=images)
 - Código: \`console.log('Hello, world!');\`
-`;
+- Citação em bloco: > Texto de citação`;
 
+export default function CreatePost() {
+  const [submitting, setSubmitting] = useState(false);
+  const [successMessage, setSuccessMessage] = useState('');
+  const [preview, setPreview] = useState(initialContent);
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm<Inputs>();
+
+  useEffect(() => {
     setPreview(initialContent);
   }, []);
 
@@ -40,7 +40,8 @@ export default function CreatePost() {
       setSubmitting(true);
       await axios.post('/api/post', data);
       setSuccessMessage('Post enviado com sucesso!');
-      reset();
+      reset(); // Resetando o formulário após o envio
+      setPreview(initialContent); // Restaurando o valor inicial
       console.log('Post enviado:', data);
     } catch (error) {
       console.error('Erro ao enviar o post:', error);
@@ -53,25 +54,12 @@ export default function CreatePost() {
     setPreview(e.target.value);
   };
 
-  const markdownStyles = {
-    heading1: {
-      fontSize: '2rem', // Ajuste conforme necessário
-      fontWeight: 'bold',
-      marginBottom: '0.5rem',
-    },
-    heading2: {
-      fontSize: '1.5rem', // Ajuste conforme necessário
-      fontWeight: 'bold',
-      marginBottom: '0.5rem',
-    },
-  };
-
-  // Restante do código...
-
   return (
-    <div className="max-w-screen-xl mx-auto p-6 bg-white rounded-md shadow-md text-black flex">
-      {successMessage && <div className="mb-4 p-3 text-green-800 bg-green-300 rounded-md">{successMessage}</div>}
-      <form onSubmit={handleSubmit(onSubmit)} className="flex-grow flex flex-col">
+    <div className="max-w-screen-xl mx-auto p-6 bg-white rounded-md shadow-md text-black flex flex-wrap">
+      <div className="w-full mb-4">
+        {successMessage && <div className="p-3 text-green-800 bg-green-300 rounded-md">{successMessage}</div>}
+      </div>
+      <form onSubmit={handleSubmit(onSubmit)} className="w-full md:w-1/2 pr-4">
         <div className="mb-4">
           <input
             {...register('titulo', { required: 'Por favor, insira um título.' })}
@@ -84,7 +72,7 @@ export default function CreatePost() {
         <textarea
           {...register('conteudo', { required: 'Por favor, insira o conteúdo.' })}
           placeholder="Digite aqui seu conteúdo em Markdown."
-          className="w-full px-3 py-2 placeholder-gray-400 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500 flex-grow"
+          className="w-full px-3 py-2 placeholder-gray-400 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"
           rows={10}
           value={preview}
           onChange={handleContentChange}
@@ -98,7 +86,7 @@ export default function CreatePost() {
           {submitting ? 'Enviando...' : 'Enviar'}
         </button>
       </form>
-      <div className="flex-grow ml-6">
+      <div className="w-full md:w-1/2 pl-4">
         <div className="mb-4">
           <ReactMarkdown
             components={{
