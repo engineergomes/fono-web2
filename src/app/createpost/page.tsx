@@ -17,8 +17,7 @@ const initialContent = `# Título Principal
 - **Negrito**: **texto**
 - Links: [texto do link](url)
 - Imagens: ![texto alternativo](https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.FrpUgxPv3Rp4f7nDh5pooAHaFj%26pid%3DApi&f=1&ipt=21317bc2345010adb9fa5fa5a09e58d69b72df484713c2737c2439cf23db9cc5&ipo=images)
-- Código: \`console.log('Hello, world!');\`
-- Citação em bloco: > Texto de citação`;
+- Código: \`console.log('Hello, world!');\``;
 
 export default function CreatePost() {
   const [submitting, setSubmitting] = useState(false);
@@ -41,7 +40,7 @@ export default function CreatePost() {
       await axios.post('/api/post', data);
       setSuccessMessage('Post enviado com sucesso!');
       reset(); // Resetando o formulário após o envio
-      setPreview(initialContent); // Restaurando o valor inicial
+      setPreview(''); // Limpando o texto do textarea
       console.log('Post enviado:', data);
     } catch (error) {
       console.error('Erro ao enviar o post:', error);
@@ -55,11 +54,11 @@ export default function CreatePost() {
   };
 
   return (
-    <div className="max-w-screen-xl mx-auto p-6 bg-white rounded-md shadow-md text-black flex flex-wrap">
+    <div className="max-w-screen-2xl mx-auto p-6 bg-white rounded-md shadow-md text-black flex flex-wrap justify-center gap-x-5">
       <div className="w-full mb-4">
         {successMessage && <div className="p-3 text-green-800 bg-green-300 rounded-md">{successMessage}</div>}
       </div>
-      <form onSubmit={handleSubmit(onSubmit)} className="w-full md:w-1/2 pr-4">
+      <form onSubmit={handleSubmit(onSubmit)} className="w-full max-w-2xl">
         <div className="mb-4">
           <input
             {...register('titulo', { required: 'Por favor, insira um título.' })}
@@ -72,7 +71,7 @@ export default function CreatePost() {
         <textarea
           {...register('conteudo', { required: 'Por favor, insira o conteúdo.' })}
           placeholder="Digite aqui seu conteúdo em Markdown."
-          className="w-full px-3 py-2 placeholder-gray-400 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"
+          className="w-full px-3 py-2 mb-4 placeholder-gray-400 border lg:min-h-[300px] border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"
           rows={10}
           value={preview}
           onChange={handleContentChange}
@@ -86,36 +85,22 @@ export default function CreatePost() {
           {submitting ? 'Enviando...' : 'Enviar'}
         </button>
       </form>
-      <div className="w-full md:w-1/2 pl-4">
-        <div className="mb-4">
+      <div className="w-full max-w-xl">
+        <div className="mb-4 p-4 border border-gray-300 rounded-md min-h-[380px]">
           <ReactMarkdown
             components={{
-              h1: ({ children }) => (
-                <h1 style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>{children}</h1>
-              ),
-              h2: ({ children }) => (
-                <h2 style={{ fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>{children}</h2>
-              ),
+              h1: ({ children }) => <h1 className="text-3xl font-bold mb-4">{children}</h1>,
+              h2: ({ children }) => <h2 className="text-2xl font-bold mb-4">{children}</h2>,
               blockquote: ({ children }) => (
-                <blockquote
-                  style={{
-                    borderLeft: '5px solid #ccc',
-                    paddingLeft: '1rem',
-                    marginLeft: 0,
-                    marginRight: 0,
-                    fontStyle: 'italic',
-                  }}
-                >
-                  {children}
-                </blockquote>
+                <blockquote className="border-l-4 border-gray-300 italic pl-4">{children}</blockquote>
               ),
               a: ({ children, href }) => (
-                <a href={href} style={{ color: 'blue' }}>
+                <a href={href} className="text-blue-500">
                   {children}
                 </a>
               ),
-              ul: ({ children }) => <ul style={{ listStyleType: 'disc', paddingLeft: '1rem' }}>{children}</ul>,
-              li: ({ children }) => <li style={{ marginBottom: '0.5rem' }}>{children}</li>,
+              ul: ({ children }) => <ul className="list-disc pl-5">{children}</ul>,
+              li: ({ children }) => <li className="mb-2">{children}</li>,
             }}
           >
             {preview}
