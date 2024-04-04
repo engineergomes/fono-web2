@@ -67,7 +67,7 @@ export const Summary = () => {
           </p>
         </div>
       </div>
-      <Container className="sm:flex-row flex flex-col items-center justify-around gap-y-14 gap-x-8">
+      <Container className="sm:flex-row flex flex-col items-center justify-around gap-y-14 gap-x-8 px-10">
         <SummaryItem
           data={{
             width: isMobile ? 200 : 300,

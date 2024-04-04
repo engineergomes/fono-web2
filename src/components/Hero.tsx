@@ -25,7 +25,7 @@ export const Hero = () => {
         </div>
         <div className="mt-14 rounded-3xl shadow-md overflow-hidden">
           {/* PLACEHOLDER */}
-          <Image src="/4.webp" alt="hero" width={500} height={500} quality={75} layout="responsive" priority></Image>
+          <Image src="/4.webp" alt="hero" width={500} height={500} quality={75} priority></Image>
         </div>
       </div>
     </>
