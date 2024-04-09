@@ -18,7 +18,10 @@ export const Desktop = () => {
       {navigation.map((item) => {
         if (item.href !== '#sobre') {
           return (
-            <div key={item.href} className={`flex gap-4 cursor-pointer border-b-2 hover:border-lightPurple text-xl`}>
+            <div
+              key={item.href}
+              className={`flex gap-4 cursor-pointer border-b-2 border-transparent hover:border-lightPurple text-xl`}
+            >
               <Link href={item.href} className="px-3 py-1">
                 <p className="text-lightPurple whitespace-nowrap">{item.name}</p>
               </Link>
@@ -27,7 +30,10 @@ export const Desktop = () => {
         } else {
           return (
             <Menu as="div" className="relative" key={item.href}>
-              <div key={item.href} className={`flex gap-4 cursor-pointer border-b-2 hover:border-lightPurple text-xl`}>
+              <div
+                key={item.href}
+                className={`flex gap-4 cursor-pointer border-transparent border-b-2 hover:border-lightPurple text-xl`}
+              >
                 <Menu.Button className="flex">
                   <p className="text-lightPurple whitespace-nowrap">{item.name}</p>
                   <CaretDown size={20} weight="fill" className="self-center fill-lightPurple" />
@@ -91,7 +97,7 @@ export const Desktop = () => {
           target="_blank"
           className="cta-button rounded-full transition-all hover:shadow-lg hover:brightness-105"
         >
-          <WhatsIcon className="w-10" />
+          <WhatsIcon className="w-10 whatsapp-button" />
         </Link>
       </div>
     </div>

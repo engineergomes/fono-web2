@@ -55,7 +55,14 @@ export const Tablet = () => {
             </div>
           </div>
         </div>
-        <Image className="rounded-3xl -scale-x-100" src="/1.webp" width={550} height={500} alt="services" />
+        <Image
+          className="rounded-3xl -scale-x-100"
+          src="/1.webp"
+          width={550}
+          height={500}
+          alt="Mulher em sala representando Intervenção Fonoaudiológica com atendimento personalizado e suporte para os pais em Jaraguá do Sul."
+          title="Intervenção Fonoaudióloga em Jaraguá do Sul - Consultório Acolhedor"
+        />
         <div className="text-darkBlue font-semibold w-full max-w-xl [&>div]:text-5xl [&>div]:w-fit [&>div]:px-3 gap-y-2 flex flex-col">
           <div className="bg-lightYellow">Espaço Ana Nascimento</div>
           <div className="bg-lightPurple">Desenvolvimento</div>
@@ -69,7 +76,7 @@ export const Tablet = () => {
             target="_blank"
             rel="noreferer"
             href={'https://wa.me/5547997775008'}
-            className="cta-button w-56 rounded-3xl py-3 px-12 text-white mt-8 bg-lightPurple"
+            className="cta-button w-56 rounded-3xl py-3 px-12 text-white mt-8 bg-lightPurple whatsapp-button"
           >
             Agende Uma Visita
           </Link>

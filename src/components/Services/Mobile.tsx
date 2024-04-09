@@ -52,7 +52,14 @@ export const Mobile = () => {
                     >
                       <Disclosure.Panel className="px-4 pb-2 text-sm text-gray-500">
                         <div className="flex flex-col items-center gap-y-5">
-                          <Image className="rounded-3xl" src={service.image} width={300} height={120} alt="services" />
+                          <Image
+                            className="rounded-3xl"
+                            src={service.image}
+                            width={300}
+                            height={120}
+                            alt="Mulher em sala representando Intervenção Fonoaudiológica com atendimento personalizado e suporte para os pais em Jaraguá do Sul."
+                            title="Intervenção Fonoaudióloga em Jaraguá do Sul - Consultório Acolhedor"
+                          />
                           <div className="flex flex-col gap-y-5 mt-5">
                             <h2 className="text-3xl text-darkBlue">{service.title}</h2>
                             <p className="text-lg font-light">{service.text}</p>

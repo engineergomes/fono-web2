@@ -15,17 +15,30 @@ export const Hero = () => {
             SEJAM BEM VINDOS
           </h2>
           <h1 className="text-4xl max-w-[25rem] sm:max-w-[40rem] text-left xl:text-7xl md:text-5xl sm:text-4xl ">
-            Fonoaudióloga Ana Nascimento
+            Fonoaudióloga em Jaraguá do Sul
           </h1>
+          <h2 className="text-2xl max-w-[25rem] sm:max-w-[40rem] text-left xl:text-lg md:text-5xl sm:text-4xl ">
+            Minha missão é tornar a terapia lúdica e envolvente para pais e pacientes, onde cada criança se sinta
+            valorizada e capaz de se expressar livremente. Estou aqui para ajudar você e seu filho a superar desafios na
+            linguagem e fala!
+          </h2>
           <Link target="_blank" rel="noreferer" href={'https://wa.me/5547997775008'}>
-            <h2 className="transition-all bg-strongYellow bg-paper shadow-md hover:shadow-2xl w-fit flex px-12 py-3 self-start rounded-3xl sm:text-xl">
-              AGENDAR VISITA
-            </h2>{' '}
+            <h3 className="transition-all bg-strongYellow bg-paper shadow-md hover:shadow-2xl w-fit flex px-12 py-3 self-start rounded-3xl sm:text-xl whatsapp-button">
+              Falar com a Fonoaudióloga{' '}
+            </h3>{' '}
           </Link>
         </div>
         <div className="mt-14 rounded-3xl shadow-md overflow-hidden">
           {/* PLACEHOLDER */}
-          <Image src="/4.webp" alt="hero" width={500} height={500} quality={75} priority></Image>
+          <Image
+            src="/fonoaudiologa-ana-nascimento.webp"
+            alt="A fonoaudióloga Ana Nascimento tem anos de experiência com linguagem e fala infantil. Sua abordagem respeita a individualidade de cada criança e acontece de forma lúdica tornando leve para os pais e pacientes."
+            width={500}
+            height={500}
+            quality={75}
+            priority
+            title={'Fonoaudióloga Ana Nascimento - Experiência em Linguagem e Fala Infantil'}
+          ></Image>
         </div>
       </div>
     </>

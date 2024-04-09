@@ -6,16 +6,17 @@ export const Desktop = () => {
     <>
       <div
         id="horarios"
-        className="bg-lightPurple bg-paper w-screen pt-20 pb-24 justify-center grid grid-cols-2 gap-x-16 relative px-10 shadow-lg z-[4]"
+        className="bg-white bg-paper w-screen pt-20 pb-24 justify-center grid grid-cols-2 gap-x-16 relative px-10 shadow-lg z-[4]"
       >
         <div className="flex h-full w-full items-center justify-center">
           <div className="relative">
             <Image
               className="rounded-3xl -scale-x-100 z-0 shadow-md"
-              src="/1.webp"
+              src="/intervencao-fonoaudiologa.webp"
               width={700}
               height={700}
-              alt="services"
+              alt="Mulher em sala representando Intervenção Fonoaudiológica com atendimento personalizado e suporte para os pais em Jaraguá do Sul."
+              title="Intervenção Fonoaudióloga em Jaraguá do Sul - Consultório Acolhedor"
             />
 
             <div className="max-w-xs flex flex-col p-3 bg-lightBlue rounded-2xl absolute lg:-bottom-10 lg:-right-10 xl:-right-10 bg-paper shadow-md">
@@ -44,7 +45,8 @@ export const Desktop = () => {
             target="_blank"
             rel="noreferer"
             href={'https://wa.me/5547997775008'}
-            className="cta-button flex justify-center items-center w-56 rounded-3xl py-3 px-12 text-white mt-8 bg-strongYellow text-lg bg-paper shadow-md transition-all hover:shadow-2xl"
+            className="cta-button flex justify-center items-center w-56 rounded-3xl py-3 px-12 text-white mt-8 bg-strongYellow 
+            text-lg bg-paper shadow-md transition-all hover:shadow-2xl whatsapp-button"
           >
             Agende Uma Visita
           </Link>
