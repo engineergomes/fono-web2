@@ -6,9 +6,9 @@ export const Desktop = () => {
   return (
     <div
       className="bg-lightPurple bg-paper w-full text-darkBlue flex flex-col items-center py-20 px-5 scroll-mt-20 gap-y-20 shadow-lg z-[3]"
-      id="depoimentos"
+      id="instagram"
     >
-      <h2 className="text-3xl sm:text-6xl bg-lightYellow px-16 bg-paper shadow-md font-regular pb-2">Depoimentos</h2>
+      <h2 className="text-3xl sm:text-6xl bg-lightYellow px-16 bg-paper shadow-md font-regular pb-2">Instagram</h2>
       <div className="grid grid-cols-3 gap-14">
         {instagramData.map((item) => {
           return (

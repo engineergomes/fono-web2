@@ -73,7 +73,7 @@ export const Summary = () => {
             width: isMobile ? 200 : 300,
             height: isMobile ? 200 : 200,
             title: 'Avaliação Fonoaudiológica',
-            text: 'Programas de terapia personalizados para atender às necessidades individuais de cada criança.',
+            // text: 'Programas de terapia personalizados para atender às necessidades individuais de cada criança.',
             src: '/lion.webp',
           }}
         />
@@ -82,7 +82,7 @@ export const Summary = () => {
             width: isMobile ? 200 : 300,
             height: isMobile ? 200 : 220,
             title: 'Terapia Fonoaudiológica',
-            text: 'Terapia focada no desenvolvimento das habilidades de comunicação social em crianças.',
+            // text: 'Terapia focada no desenvolvimento das habilidades de comunicação social em crianças.',
             src: '/monkey.webp',
           }}
         />

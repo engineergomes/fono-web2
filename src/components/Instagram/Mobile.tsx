@@ -13,9 +13,9 @@ export const Mobile = () => {
     <>
       <div
         className="bg-lightPurple bg-paper w-full text-darkBlue flex flex-col items-center py-16 scroll-mt-20 gap-y-8 h-[32rem]"
-        id="depoimentos"
+        id="instagram"
       >
-        <h2 className="text-3xl sm:text-6xl bg-strongYellow px-6 bg-paper">Depoimentos</h2>
+        <h2 className="text-3xl sm:text-6xl bg-strongYellow px-6 bg-paper">Instagram</h2>
         <Swiper
           slidesPerView={1.2}
           spaceBetween={20}
