@@ -51,7 +51,7 @@ export const Desktop = () => {
                 }}
                 id={Object.keys(services).find((key) => services[key as ServicesType].name === service.name)}
                 className={`px-8 py-3 rounded-3xl whitespace-nowrap transition-all ${
-                  aux === service.order ? 'bg-lightBlue text-white bg-paper' : 'hover:brightness-110'
+                  aux === service.order ? 'bg-lightBlue text-white bg-paper' : 'text-white hover:brightness-110'
                 } `}
               >
                 {service.name}

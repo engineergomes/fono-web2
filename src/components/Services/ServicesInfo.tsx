@@ -6,7 +6,7 @@ export const ServicesInfo = (props: any) => {
     <div className="flex justify-center bg-white w-fit py-16 px-10 rounded-3xl gap-x-10 h-full shadow-md bg-paper">
       <div className="flex flex-col items-center gap-y-5 justify-center">
         <div className="flex flex-col gap-y-5">
-          <h2 className="text-3xl text-darkBlue font-medium">{props.data.title}</h2>
+          <h2 className="text-2xl text-darkBlue font-medium w-2/3 self-center">{props.data.title}</h2>
           <p className="text-lg text-gray-700 max-w-[45ch] self-center">{props.data.text}</p>
         </div>
         <ul className="[&>*]:flex [&>*]:text-xl [&>*]:text-darkBlue flex flex-col gap-y-5 whitespace-nowrap">
@@ -24,7 +24,14 @@ export const ServicesInfo = (props: any) => {
           </li>
         </ul>
       </div>
-      <Image className="rounded-3xl object-cover" src={props.data.image} width={500} height={300} alt="services" />
+      <Image
+        className="rounded-3xl object-cover"
+        src={props.data.image}
+        width={500}
+        height={300}
+        alt={props.data.alt}
+        title={props.data.title}
+      />
     </div>
   );
 };

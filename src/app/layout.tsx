@@ -1,3 +1,4 @@
+import { Whatsapp } from '@/components/widgets/Whatsapp';
 import './globals.css';
 import type { Metadata } from 'next';
 import { Montserrat } from 'next/font/google';
@@ -10,9 +11,9 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   viewport: 'width=device-width, initial-scale=1',
-  title: 'Fonoaudióloga Ana Nascimento | Jaragua do Sul',
+  title: 'Fonoaudióloga em Jaraguá do Sul | Ana Nascimento',
   description:
-    'Fonoaudióloga Ana Nascimento especializada em Desenvolvimento Infantil. Consultório em Jaraguá do Sul, oferecendo um ambiente acolhedor para crianças e famílias. Agende uma visita.',
+    'Fono em Jaraguá do Sul, especializada em Desenvolvimento Infantil. Ambiente acolhedor para crianças e famílias. Fonoaudióloga Ana Nascimento - Agende uma visita.',
   robots: 'index, follow',
   alternates: {
     canonical: 'https://www.fonoana.com.br/',
@@ -51,7 +52,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html className={`scroll-smooth ${montserrat.variable}`} lang="pt_BR">
-      <body className="scroll-smooth w-screen overflow-x-hidden pt-20 lg:pt-24">{children}</body>
+      <body className="scroll-smooth w-screen overflow-x-hidden pt-20 lg:pt-24">
+        {children}
+        <Whatsapp />
+      </body>
       <Script id="schema" type="application/ld+json" defer>
         {`
   "@context": "http://schema.org",

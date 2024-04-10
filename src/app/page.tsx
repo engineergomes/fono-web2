@@ -1,25 +1,14 @@
-import { Hero } from '@/components/Hero';
-import { Services } from '@/components/Services/Services';
-import { Summary } from '@/components/Summary';
-import { OpenHours } from '@/components/OpenHours/OpenHours';
+'use client';
 
-import { Header } from '@/components/Header';
-import Footer from '@/components/Footer';
-import { Instagram } from '@/components/Instagram';
-import UrlProvider from '@/providers/UrlProvider';
+import { useRouter } from 'next/navigation';
+import { useEffect } from 'react';
 
 export default function Home() {
-  return (
-    <main className="flex flex-col items-center justify-center  scroll-smooth">
-      <UrlProvider>
-        <Header />
-        <Hero />
-        <Summary />
-        <OpenHours />
-        <Instagram />
-        <Services />
-        <Footer />
-      </UrlProvider>
-    </main>
-  );
+  const router = useRouter();
+
+  useEffect(() => {
+    router.push('/fonoaudiologa-juaragua-sul');
+  }, []); // Isso garante que o redirecionamento ocorra apenas uma vez, na montagem do componente
+
+  return <></>;
 }

@@ -12,10 +12,10 @@ export const Mobile = () => {
   return (
     <>
       <div
-        className="bg-white bg-paper w-full text-darkBlue flex flex-col items-center py-16 scroll-mt-20 gap-y-8 h-[32rem]"
-        id="blog"
+        className="bg-lightPurple bg-paper w-full text-darkBlue flex flex-col items-center py-16 scroll-mt-20 gap-y-8 h-[32rem]"
+        id="instagram"
       >
-        <h2 className="text-3xl sm:text-6xl bg-strongYellow px-6 bg-paper">Blog</h2>
+        <h2 className="text-3xl sm:text-6xl bg-strongYellow px-6 bg-paper">Instagram</h2>
         <Swiper
           slidesPerView={1.2}
           spaceBetween={20}
@@ -30,7 +30,14 @@ export const Mobile = () => {
             return (
               <SwiperSlide key={item.src} className="rounded-lg overflow-hidden">
                 <Link href={item.href} target="_blank">
-                  <Image className="object-cover" src={item.src} width={400} height={300} alt="instagram-image" />
+                  <Image
+                    className="object-cover"
+                    src={item.src}
+                    width={400}
+                    height={300}
+                    alt={item.alt}
+                    title={item.title}
+                  />
                 </Link>
               </SwiperSlide>
             );

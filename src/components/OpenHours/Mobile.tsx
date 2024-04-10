@@ -6,7 +6,7 @@ export const Mobile = () => {
     <>
       <div
         id="horarios"
-        className="bg-lightPurple bg-paper w-full py-16 justify-center flex flex-col items-center gap-y-14 px-5 scroll-m-20"
+        className="bg-white bg-paper w-full py-16 justify-center flex flex-col items-center gap-y-14 px-5 scroll-m-20"
       >
         <div className="text-darkBlue font-semibold [&>*]:px-3 gap-y-2 flex flex-col sm:justify-center sm:w-full sm:items-center">
           <div className="text-2xl sm:text-5xl bg-lightYellow whitespace-nowrap bg-paper w-[95%]">Fonoaudióloga</div>
@@ -18,7 +18,14 @@ export const Mobile = () => {
             adequado e acolhedor para o atendimento de crianças e suas famílias.
           </p>
         </div>
-        <Image className="rounded-3xl -scale-x-100" src="/1.webp" width={500} height={500} alt="services" />
+        <Image
+          className="rounded-3xl -scale-x-100"
+          src="/intervencao-fonoaudiologa.webp"
+          width={500}
+          height={500}
+          alt="Mulher em sala representando Intervenção Fonoaudiológica com atendimento personalizado e suporte para os pais em Jaraguá do Sul."
+          title="Intervenção Fonoaudióloga em Jaraguá do Sul - Consultório Acolhedor"
+        />
         <div className="max-w-[500px] flex flex-col p-4 bg-lightBlue rounded-2xl items-center justify-center">
           <div className="border-2 p-5 border-dashed bg-lightBlue rounded-2xl flex flex-col gap-y-2 text-darkBlue">
             <h2 className="text-center text-2xl font-semibold">Horários</h2>
@@ -33,7 +40,7 @@ export const Mobile = () => {
           target="_blank"
           rel="noreferer"
           href={'https://wa.me/5547997775008'}
-          className="cta-button rounded-3xl py-3 px-12 text-white bg-strongYellow text-lg bg-paper shadow-md transition-all hover:shadow-2xl"
+          className="cta-button rounded-3xl py-3 px-12 text-white bg-strongYellow text-lg bg-paper shadow-md transition-all hover:shadow-2xl whatsapp-button"
         >
           Agende Uma Visita
         </Link>

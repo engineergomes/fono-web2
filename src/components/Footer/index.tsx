@@ -83,7 +83,7 @@ export default function Footer() {
                   href={'https://wa.me/5547997775008'}
                   className="cta-button rounded-full transition-all hover:shadow-lg hover:brightness-105"
                 >
-                  <WhatsIcon className="w-10" alt="Whatsapp" />
+                  <WhatsIcon className="w-10 whatsapp-button" alt="Whatsapp" />
                 </Link>
               </div>
             </div>
