@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { Fingerprint, Heart, MapPin } from 'phosphor-react-sc';
 
 export const Desktop = () => {
   return (
@@ -50,6 +51,37 @@ export const Desktop = () => {
           >
             Agende Uma Visita
           </Link>
+        </div>
+      </div>
+      <div className="text-darkBlue bg-white bg-paper w-screen pt-20 pb-24 justify-center flex gap-x-16 relative px-10 shadow-lg z-[4]">
+        <div className="flex gap-x-3 items-center">
+          <MapPin size={50} />
+          <div className="flex flex-col gap-y-2 w-72 [&>p]:text-sm">
+            <h3>Consultório Acessível</h3>
+            <p>
+              Estamos localizados no centro de Jaraguá do Sul, oferecendo ambiente acolhedor para crianças e famílias.
+            </p>
+          </div>
+        </div>
+        <div className="flex gap-x-3 items-center">
+          <Heart size={60} />
+          <div className="flex flex-col gap-y-2 w-72 [&>p]:text-sm">
+            <h3>Abordagem Humanizada</h3>
+            <p>
+              Experiência em atender crianças e famílias com intervenção fonoaudiológica, combinando especialização e
+              empatia.
+            </p>
+          </div>
+        </div>
+        <div className="flex gap-x-3 items-center">
+          <Fingerprint size={60} />
+          <div className="flex flex-col gap-y-2 w-72 [&>p]:text-sm">
+            <h3>Acompanhamento Individualizado</h3>
+            <p>
+              Acompanhamento personalizado para cada criança, adaptando sessões às suas necessidades e ritmo de
+              desenvolvimento.
+            </p>
+          </div>
         </div>
       </div>
     </>

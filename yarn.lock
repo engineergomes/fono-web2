@@ -123,7 +123,7 @@
 
 "@next/swc-darwin-arm64@13.4.16":
   version "13.4.16"
-  resolved "https://registry.npmjs.org/@next/swc-darwin-arm64/-/swc-darwin-arm64-13.4.16.tgz"
+  resolved "https://registry.yarnpkg.com/@next/swc-darwin-arm64/-/swc-darwin-arm64-13.4.16.tgz#ed6a342f95e5f21213fdadbceb65b40ae678cee0"
   integrity sha512-Rl6i1uUq0ciRa3VfEpw6GnWAJTSKo9oM2OrkGXPsm7rMxdd2FR5NkKc0C9xzFCI4+QtmBviWBdF2m3ur3Nqstw==
 
 "@next/swc-darwin-x64@13.4.16":
@@ -143,12 +143,12 @@
 
 "@next/swc-linux-x64-gnu@13.4.16":
   version "13.4.16"
-  resolved "https://registry.yarnpkg.com/@next/swc-linux-x64-gnu/-/swc-linux-x64-gnu-13.4.16.tgz#6e0b0eab1c316506950aeb4a09a5ea5c38edabe7"
+  resolved "https://registry.npmjs.org/@next/swc-linux-x64-gnu/-/swc-linux-x64-gnu-13.4.16.tgz"
   integrity sha512-KcQGwchAKmZVPa8i5PLTxvTs1/rcFnSltfpTm803Tr/BtBV3AxCkHLfhtoyVtVzx/kl/oue8oS+DSmbepQKwhw==
 
 "@next/swc-linux-x64-musl@13.4.16":
   version "13.4.16"
-  resolved "https://registry.yarnpkg.com/@next/swc-linux-x64-musl/-/swc-linux-x64-musl-13.4.16.tgz#36b84e4509168a5cadf9dfd728c239002d4311fe"
+  resolved "https://registry.npmjs.org/@next/swc-linux-x64-musl/-/swc-linux-x64-musl-13.4.16.tgz"
   integrity sha512-2RbMZNxYnJmW8EPHVBsGZPq5zqWAyBOc/YFxq/jIQ/Yn3RMFZ1dZVCjtIcsiaKmgh7mjA/W0ApbumutHNxRqqQ==
 
 "@next/swc-win32-arm64-msvc@13.4.16":
@@ -1389,7 +1389,7 @@ fs.realpath@^1.0.0:
 
 fsevents@~2.3.2:
   version "2.3.3"
-  resolved "https://registry.npmjs.org/fsevents/-/fsevents-2.3.3.tgz"
+  resolved "https://registry.yarnpkg.com/fsevents/-/fsevents-2.3.3.tgz#cac6407785d03675a2a5e1a5305c697b347d90d6"
   integrity sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==
 
 function-bind@^1.1.1, function-bind@^1.1.2:
