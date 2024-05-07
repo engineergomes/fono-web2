@@ -1,22 +1,26 @@
 export const navigation = [
   {
     name: 'Início',
-    href: '#inicio',
+    href: '/fonoaudiologa-juaragua-sul#inicio',
   },
   {
     name: 'Sobre',
-    href: '#sobre',
+    href: '/fonoaudiologa-juaragua-sul#sobre',
   },
   {
     name: 'Instagram',
-    href: '#instagram',
+    href: '/fonoaudiologa-juaragua-sul#instagram',
   },
   {
     name: 'Serviços',
-    href: '#servicos',
+    href: '/fonoaudiologa-juaragua-sul#servicos',
   },
   {
     name: 'Contato',
-    href: '#contato',
+    href: '/fonoaudiologa-juaragua-sul#contato',
+  },
+  {
+    name: 'Blog',
+    href: 'fonoaudiologa-juaragua-sul/blog',
   },
 ];
