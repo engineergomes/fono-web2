@@ -9,10 +9,10 @@ export default function Footer() {
     <>
       <div
         id="contato"
-        className="w-full bg-lightGreen bg-paper relative text-sm sm:pt-0 pt-6 h-[110%] text-blue-950 shadow-md"
+        className="w-full bg-lightGreen bg-paper relative text-sm sm:pt-0 h-[110%] text-blue-950 shadow-md"
       >
-        <Container>
-          <div className="flex flex-col md:grid grid-cols-1  md:grid-cols-3 w-full justify-center items-center gap-x-4 gap-y-8">
+        <Container className="py-10">
+          <div className="flex flex-col md:grid grid-cols-1 md:grid-cols-3 w-full justify-center items-center gap-x-4 gap-y-8">
             <div className="flex flex-col items-center justify-center lg:justify-start lg:items-start gap-y-4 sm:gap-y-8">
               <Image src="/logo-full-text-black.webp" alt="Logo" width={350} height={200} />
             </div>

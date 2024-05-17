@@ -1,4 +1,5 @@
 'use client';
+import WhatsIcon from '@/assets/WhatsIcon';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -23,9 +24,10 @@ export const Hero = () => {
             linguagem e fala!
           </h2>
           <Link target="_blank" rel="noreferer" href={'https://wa.me/5547997775008'}>
-            <h3 className="transition-all bg-strongYellow bg-paper shadow-md hover:shadow-2xl w-fit flex px-12 py-3 self-start rounded-3xl sm:text-xl whatsapp-button">
-              Falar com a Fonoaudióloga{' '}
-            </h3>{' '}
+            <button className="transition-all items-center bg-strongYellow bg-paper shadow-md hover:shadow-2xl w-fit flex px-10 py-3 gap-x-3 self-start rounded-3xl sm:text-xl whatsapp-button">
+              <WhatsIcon className="w-10" />
+              <h3>Falar com a Fonoaudióloga</h3>
+            </button>
           </Link>
         </div>
         <div className="mt-14 rounded-3xl shadow-md overflow-hidden">
