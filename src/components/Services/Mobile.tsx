@@ -1,5 +1,5 @@
 import { Disclosure, Transition } from '@headlessui/react';
-import { CaretDown, Pencil } from 'phosphor-react-sc';
+import { CaretDown, CaretUp, Pencil } from 'phosphor-react-sc';
 import Image from 'next/image';
 import { services } from './data';
 import { useInView } from 'react-intersection-observer';
@@ -23,8 +23,8 @@ export const Mobile = () => {
 
   return (
     <>
-      <div className="w-full flex items-center justify-center" ref={ref}>
-        <div className=" w-full max-w-md  sm:max-w-lg md:max-w-2xl rounded-2xl py-6 px-4 md:px-8 md:py-10 bg-white bg-paper flex flex-col gap-y-8">
+      <div className="w-full p-2 flex items-center justify-center" ref={ref}>
+        <div className=" w-full max-w-md  sm:max-w-lg md:max-w-2xl rounded-2xl py-10 px-4 md:px-8 md:py-10 bg-white bg-paper flex flex-col gap-y-8">
           {Object.values(services).map((service, index) => {
             return (
               <Disclosure key={index}>
@@ -37,8 +37,8 @@ export const Mobile = () => {
                            focus-visible:bg-lightBlue focus-visible:ring-opacity-75"
                     >
                       <span className="text-lg">{service.name}</span>
-                      <CaretDown
-                        className={`${open ? ' transform' : '-rotate-90'} transition-all h-5 w-5 text-white-500`}
+                      <CaretUp
+                        className={`${open ? ' transform' : 'rotate-180'} transition-all h-5 w-5 text-white-500`}
                       />
                     </Disclosure.Button>
                     <Transition
@@ -50,7 +50,7 @@ export const Mobile = () => {
                       leaveFrom="opacity-100 translate-y-0"
                       leaveTo="opacity-0 -translate-y-20"
                     >
-                      <Disclosure.Panel className="px-4 pb-2 text-sm text-gray-500">
+                      <Disclosure.Panel className="px-4 pb-2 text-sm text-[#493d3d]">
                         <div className="flex flex-col items-center gap-y-5">
                           <Image
                             className="rounded-3xl"
@@ -62,7 +62,7 @@ export const Mobile = () => {
                           />
                           <div className="flex flex-col gap-y-5 mt-5">
                             <h2 className="text-3xl text-darkBlue">{service.title}</h2>
-                            <p className="text-lg font-light">{service.text}</p>
+                            <p className="text-base sm:text-lg font-light">{service.text}</p>
                           </div>
                           <ul className="[&>*]:flex text-lg leading-6  [&>*]:text-darkBlue grid grid-rows-3 gap-y-5">
                             <li className="flex items-center justify-start ">

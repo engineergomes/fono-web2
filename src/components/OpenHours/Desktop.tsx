@@ -38,7 +38,7 @@ export const Desktop = () => {
           <div className="text-2xl sm:text-5xl bg-lightGreen whitespace-nowrap bg-paper w-[85%]">Ana Nascimento</div>
           <div className="text-2xl sm:text-5xl bg-lightBlue bg-paper w-fit">Desenvolvimento</div>
           <div className="text-2xl sm:text-5xl bg-white bg-paper w-[50%]">Infantil</div>
-          <p className="mt-8 text-black/90 font-light text-lg">
+          <p className="mt-8 text-[#493d3d] font-light text-lg">
             O consultório está localizado no centro de Jaraguá do Sul, em um espaço projetado para oferecer um ambiente
             adequado e acolhedor para o atendimento de crianças e suas famílias.
           </p>

@@ -9,7 +9,7 @@ export default function Footer() {
     <>
       <div
         id="contato"
-        className="w-full bg-lightGreen bg-paper relative text-sm sm:pt-0 h-[110%] text-blue-950 shadow-md"
+        className="w-full bg-lightGreen bg-paper relative text-sm h-[110%] text-blue-950 shadow-md py-7 sm:py-14"
       >
         <Container className="py-10">
           <div className="flex flex-col md:grid grid-cols-1 md:grid-cols-3 w-full justify-center items-center gap-x-4 gap-y-8">
