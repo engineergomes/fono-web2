@@ -1,3 +1,4 @@
+import WhatsIcon from '@/assets/WhatsIcon';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -40,9 +41,10 @@ export const Mobile = () => {
           target="_blank"
           rel="noreferer"
           href={'https://wa.me/5547997775008'}
-          className="cta-button rounded-3xl py-3 px-12 text-white bg-strongYellow text-lg bg-paper shadow-md transition-all hover:shadow-2xl whatsapp-button"
+          className="flex items-center gap-3 cta-button rounded-3xl py-2 px-8 text-white bg-strongYellow text-lg bg-paper shadow-md transition-all hover:shadow-2xl whatsapp-button"
         >
-          Agende Uma Visita
+          <p>Agende Uma Visita</p>
+          <WhatsIcon className="w-10" />
         </Link>
       </div>
     </>

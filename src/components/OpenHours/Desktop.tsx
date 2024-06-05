@@ -1,3 +1,4 @@
+import WhatsIcon from '@/assets/WhatsIcon';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Fingerprint, Heart, MapPin } from 'phosphor-react-sc';
@@ -46,10 +47,11 @@ export const Desktop = () => {
             target="_blank"
             rel="noreferer"
             href={'https://wa.me/5547997775008'}
-            className="cta-button flex justify-center items-center w-56 rounded-3xl py-3 px-12 text-white mt-8 bg-strongYellow 
+            className="cta-button flex justify-center items-center w-1/2 gap-3 rounded-3xl py-3 px-12 text-white mt-8 bg-strongYellow 
             text-lg bg-paper shadow-md transition-all hover:shadow-2xl whatsapp-button"
           >
-            Agende Uma Visita
+            <p>Agende Uma Visita</p>
+            <WhatsIcon className="w-10" />
           </Link>
         </div>
       </div>

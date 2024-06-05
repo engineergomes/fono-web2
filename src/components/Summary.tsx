@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight } from 'phosphor-react-sc';
+import { ArrowDown, ArrowRight } from 'phosphor-react-sc';
 import Container from './Container';
 import { useWindow } from '@/hooks/useWindow';
 
@@ -22,11 +22,11 @@ export const Summary = () => {
               alt="Ana Nascimento"
             ></Image>
           </div>
-          <h2 className="text-3xl text-center">{props.data.title}</h2>
+          <h2 className="text-2xl sm:text-3xl text-center">{props.data.title}</h2>
           <Link href="#servicos" className="mx-auto">
             <p className="text-xl flex gap-x-[2.5px] items-center">
               Saiba mais
-              <ArrowRight className="" size={20} />
+              <ArrowDown className="" size={20} />
             </p>
           </Link>
         </div>

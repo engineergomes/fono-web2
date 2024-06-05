@@ -37,7 +37,7 @@ export const Desktop = () => {
       <div className="flex justify-center" ref={ref}>
         <div
           className="flex border-2 border-lightBlue border-dashed rounded-full
-       justify-between font-semibold text-xl gap-x-16 text-lightBlue select-none
+       justify-between font-semibold text-xl gap-x-16 select-none
        items-center p-1"
         >
           {Object.values(services).map((service, index) => {
@@ -50,7 +50,7 @@ export const Desktop = () => {
                   return handleClick(target.id.toString());
                 }}
                 id={Object.keys(services).find((key) => services[key as ServicesType].name === service.name)}
-                className={`px-8 py-3 rounded-3xl whitespace-nowrap transition-all ${
+                className={`px-8 py-3 rounded-3xl whitespace-nowrap transition-all font-bold ${
                   aux === service.order ? 'bg-lightBlue text-white bg-paper' : 'text-white hover:brightness-110'
                 } `}
               >

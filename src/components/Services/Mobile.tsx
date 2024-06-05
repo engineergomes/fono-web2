@@ -61,20 +61,20 @@ export const Mobile = () => {
                             title="Intervenção Fonoaudióloga em Jaraguá do Sul - Consultório Acolhedor"
                           />
                           <div className="flex flex-col gap-y-5 mt-5">
-                            <h2 className="text-3xl text-darkBlue">{service.title}</h2>
-                            <p className="text-base sm:text-lg font-light">{service.text}</p>
+                            <h2 className="text-xl text-darkBlue">{service.title}</h2>
+                            <p className="text-sm font-normal sm:text-lg sm:font-light">{service.text}</p>
                           </div>
-                          <ul className="[&>*]:flex text-lg leading-6  [&>*]:text-darkBlue grid grid-rows-3 gap-y-5">
+                          <ul className="[&>*]:flex text-sm leading-6  [&>*]:text-darkBlue grid grid-rows-3 gap-y-5">
                             <li className="flex items-center justify-start ">
-                              <Pencil size={32} className="mr-2" />
+                              <Pencil size={20} className="mr-2" />
                               <p className="text-left"> {service.firstListItem}</p>
                             </li>
                             <li className="flex items-center justify-start">
-                              <Pencil size={32} className="mr-2" />
+                              <Pencil size={20} className="mr-2" />
                               <p className="text-left"> {service.secondListItem}</p>
                             </li>
                             <li className="flex items-center justify-start">
-                              <Pencil size={32} className="mr-2" />
+                              <Pencil size={20} className="mr-2" />
                               <p className="text-left">{service.thirdListItem}</p>
                             </li>
                           </ul>

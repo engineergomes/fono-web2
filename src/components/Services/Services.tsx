@@ -13,7 +13,7 @@ export const Services = () => {
         sm:min-h-[70rem] justify-center relative items-center overflow-visible shadow-lg z-[2]"
       >
         <div className="flex justify-center ">
-          <h2 className="bg-strongYellow bg-paper sm:w-fit w-[90%] py-3 px-1 font-medium rounded text-darkBlue text-lg sm:text-5xl xl:text-6xl sm:px-10 shadow-md">
+          <h2 className="bg-strongYellow bg-paper sm:w-[90%] w-[90%] py-3 px-1 font-medium rounded text-darkBlue text-lg sm:text-5xl xl:text-6xl sm:px-10 shadow-md">
             Abordagem Especializada e Humanizada
           </h2>
         </div>

@@ -28,11 +28,11 @@ export const Mobile = () => {
   return (
     <>
       <Popover as={React.Fragment}>
-        <div className="flex w-full justify-between items-center h-16">
+        <div className="flex w-full justify-center sm:justify-between items-center h-16 sm:h-20">
           <Link className="px-4" href="/">
             <Image src={'/logo-full-text-black.webp'} alt={'logo'} width={300} height={70} />
           </Link>
-          <Popover.Button className={`h-full px-4`} onClick={() => setMenuOpen(!menuOpen)}>
+          <Popover.Button className={`h-full px-4 mr-4`} onClick={() => setMenuOpen(!menuOpen)}>
             {' '}
             {/* Altere o estado do menu quando o botão for clicado */}
             <List className="w-8 h-8" />
@@ -49,19 +49,25 @@ export const Mobile = () => {
         >
           <Popover.Panel className="absolute z-50 inset-0 bg-lightGreen bg-paper h-screen w-screen overflow-hidden">
             <Container>
-              <div className="flex w-full items-center justify-between z-50">
-                <Link href="/" className="px-4">
-                  <Popover.Button>
-                    <Image src={'/logo-full-text-black.webp'} alt={'logo'} width={260} height={70} />
-                  </Popover.Button>
-                </Link>
-
-                <Popover.Button className={`h-full px-4 pb-6 pt-2`} onClick={() => setMenuOpen(false)}>
+              <div className="flex w-screen items-center justify-between z-50 p-4">
+                <div className="flex-grow"></div> {/* This takes up remaining space before the image */}
+                <div className="flex-shrink-0">
+                  <Link href="/" className="px-4">
+                    <Popover.Button>
+                      <Image src={'/logo-full-text-black.webp'} alt={'logo'} width={260} height={70} />
+                    </Popover.Button>
+                  </Link>
+                </div>
+                <div className="flex-grow flex justify-end">
                   {' '}
-                  {/* Feche o menu quando o botão for clicado */}
-                  <X weight="bold" className="h-6 w-6  fill-lightPurple hover:fill-black/70"></X>
-                </Popover.Button>
+                  {/* This takes up remaining space after the image and ensures the button is on the right */}
+                  <Popover.Button className="h-full pb-6 pt-2" onClick={() => setMenuOpen(false)}>
+                    {/* Close the menu when the button is clicked */}
+                    <X weight="bold" className="h-6 w-6 fill-lightPurple hover:fill-black/70" />
+                  </Popover.Button>
+                </div>
               </div>
+
               <div className="flex flex-col text-left mt-10 gap-y-4 items-center">
                 {navigation.map((item) => {
                   return (
