@@ -1,5 +1,7 @@
+import WhatsIcon from '@/assets/WhatsIcon';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Fingerprint, Heart, MapPin } from 'phosphor-react-sc';
 
 export const Desktop = () => {
   return (
@@ -37,7 +39,7 @@ export const Desktop = () => {
           <div className="text-2xl sm:text-5xl bg-lightGreen whitespace-nowrap bg-paper w-[85%]">Ana Nascimento</div>
           <div className="text-2xl sm:text-5xl bg-lightBlue bg-paper w-fit">Desenvolvimento</div>
           <div className="text-2xl sm:text-5xl bg-white bg-paper w-[50%]">Infantil</div>
-          <p className="mt-8 text-black/90 font-light text-lg">
+          <p className="mt-8 text-[#493d3d] font-light text-lg">
             O consultório está localizado no centro de Jaraguá do Sul, em um espaço projetado para oferecer um ambiente
             adequado e acolhedor para o atendimento de crianças e suas famílias.
           </p>
@@ -45,11 +47,43 @@ export const Desktop = () => {
             target="_blank"
             rel="noreferer"
             href={'https://wa.me/5547997775008'}
-            className="cta-button flex justify-center items-center w-56 rounded-3xl py-3 px-12 text-white mt-8 bg-strongYellow 
+            className="cta-button flex justify-center items-center w-1/2 gap-3 rounded-3xl py-3 px-12 text-white mt-8 bg-strongYellow 
             text-lg bg-paper shadow-md transition-all hover:shadow-2xl whatsapp-button"
           >
-            Agende Uma Visita
+            <p>Agende Uma Visita</p>
+            <WhatsIcon className="w-10" />
           </Link>
+        </div>
+      </div>
+      <div className="text-darkBlue bg-white bg-paper w-screen pt-20 pb-24 justify-center flex gap-x-16 relative px-10 shadow-lg z-[4]">
+        <div className="flex gap-x-3 items-center">
+          <MapPin size={50} />
+          <div className="flex flex-col gap-y-2 w-72 [&>p]:text-sm">
+            <h3>Consultório Acessível</h3>
+            <p>
+              Estamos localizados no centro de Jaraguá do Sul, oferecendo ambiente acolhedor para crianças e famílias.
+            </p>
+          </div>
+        </div>
+        <div className="flex gap-x-3 items-center">
+          <Heart size={60} />
+          <div className="flex flex-col gap-y-2 w-72 [&>p]:text-sm">
+            <h3>Abordagem Humanizada</h3>
+            <p>
+              Experiência em atender crianças e famílias com intervenção fonoaudiológica, combinando especialização e
+              empatia.
+            </p>
+          </div>
+        </div>
+        <div className="flex gap-x-3 items-center">
+          <Fingerprint size={60} />
+          <div className="flex flex-col gap-y-2 w-72 [&>p]:text-sm">
+            <h3>Acompanhamento Individualizado</h3>
+            <p>
+              Acompanhamento personalizado para cada criança, adaptando sessões às suas necessidades e ritmo de
+              desenvolvimento.
+            </p>
+          </div>
         </div>
       </div>
     </>
