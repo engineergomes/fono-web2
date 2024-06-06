@@ -9,8 +9,8 @@ function Blog() {
   const [posts, setPosts] = useState<Post[]>([]);
   const [loading, setLoading] = useState(false);
   const [page, setPage] = useState(1);
-  const router = useRouter();
-  const endOfPageRef = useRef<HTMLDivElement>(null);
+  const [allPostsLoaded, setAllPostsLoaded] = useState(false);
+  // const endOfPageRef = useRef<HTMLDivElement>(null);
 
   interface Post {
     id: number;
@@ -23,51 +23,28 @@ function Blog() {
     async function fetchPosts() {
       try {
         setLoading(true);
-        const response = await fetch(`http://localhost:3000/api/post`);
+        const response = await fetch(`http://localhost:3000/api/post?page=${page}`);
         if (!response.ok) {
           throw new Error('Erro ao buscar posts');
         }
         const data = await response.json();
-        setPosts(data);
+        if (data.length === 0) {
+          setAllPostsLoaded(true);
+        } else {
+          setPosts(data);
+        }
         setLoading(false);
       } catch (error) {
         console.error(error);
+        setLoading(false);
       }
     }
 
     fetchPosts();
   }, []);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting && !loading) {
-          loadMorePosts();
-        }
-      },
-      { threshold: 0.5 }
-    );
-
-    if (endOfPageRef.current && posts.length > 0) {
-      observer.observe(endOfPageRef.current);
-    }
-
-    return () => {
-      if (endOfPageRef.current) {
-        observer.unobserve(endOfPageRef.current);
-      }
-    };
-  }, [loading, posts]);
-
-  const loadMorePosts = () => {
-    setPage((prevPage) => prevPage + 1);
-  };
-
-  // Função para renderizar os posts de acordo com a página atual
   const renderPosts = () => {
-    const startIndex = (page - 1) * 5; // Índice inicial dos posts a serem renderizados
-    const endIndex = startIndex + 5; // Índice final (não incluído) dos posts a serem renderizados
-    return posts.slice(startIndex, endIndex).map((post) => (
+    return posts.map((post) => (
       <div key={post.id} className="bg-beige rounded-md p-4 lg:min-w-[1200px] my-4 bg-white">
         <h2 className="text-5xl font-bold mb-4 text-center">{post.title}</h2>
         <ReactMarkdown
@@ -91,12 +68,13 @@ function Blog() {
   };
 
   return (
-    <div className="text-black flex flex-col items-center bg-slate-300">
+    <div className="text-black flex flex-col items-center bg-slate-300 p-10">
       <Header />
-      <h1 className="text-3xl font-bold mb-8">Blog</h1>
+      <h1 className="text-7xl font-medium mb-8">Blog</h1>
       {renderPosts()}
       {loading && <p>Carregando...</p>}
-      <div ref={endOfPageRef} style={{ height: '10px' }} />
+      {/* <div ref={endOfPageRef} style={{ height: '10px' }} /> */}
+      {allPostsLoaded && <p>Todos os posts foram carregados.</p>}
     </div>
   );
 }

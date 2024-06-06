@@ -21,6 +21,6 @@ export const navigation = [
   },
   {
     name: 'Blog',
-    href: 'fonoaudiologa-juaragua-sul/blog',
+    href: '/fonoaudiologa-juaragua-sul/blog',
   },
 ];
