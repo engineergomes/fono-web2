@@ -70,19 +70,30 @@ export const Mobile = () => {
 
               <div className="flex flex-col text-left mt-10 gap-y-4 items-center">
                 {navigation.map((item) => {
-                  return (
-                    <Link href={item.href} key={item.href}>
-                      <Popover.Button
-                        className={`text-xl font-semibold flex items-center justify-center py-4 w-full px-20 
+                  if (item.href !== '#saiba-mais') {
+                    return (
+                      <Link href={item.href} key={item.href}>
+                        <Popover.Button
+                          className={`text-xl font-semibold flex items-center justify-center py-4 w-full px-20 
                           ${item.href === currentUrl ? 'bg-lightPurple bg-paper rounded-full' : 'text-lightPurple'}
                         `}
-                        onClick={() => setMenuOpen(!menuOpen)}
-                      >
-                        {item.name}
-                      </Popover.Button>
-                    </Link>
-                  );
+                          onClick={() => setMenuOpen(!menuOpen)}
+                        >
+                          {item.name}
+                        </Popover.Button>
+                      </Link>
+                    );
+                  }
                 })}
+                <Link href={'https://fonoana-blog.vercel.app/'} target="_blank">
+                  <Popover.Button
+                    className={`text-xl font-semibold flex items-center justify-center py-4 w-full px-20 text-lightPurple 
+                        `}
+                    onClick={() => setMenuOpen(!menuOpen)}
+                  >
+                    Blog
+                  </Popover.Button>
+                </Link>
                 <Link href="https://www.instagram.com/fonoananascimento/" target="_blank">
                   <Popover.Button
                     onClick={() => setMenuOpen(!menuOpen)}

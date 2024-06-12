@@ -16,18 +16,7 @@ export const Desktop = () => {
         </Link>
       </div>
       {navigation.map((item) => {
-        if (item.href !== '#sobre') {
-          return (
-            <div
-              key={item.href}
-              className={`flex gap-4 cursor-pointer border-b-2 border-transparent hover:border-lightPurple text-xl`}
-            >
-              <Link href={item.href} className="px-3 py-1">
-                <p className="text-lightPurple whitespace-nowrap">{item.name}</p>
-              </Link>
-            </div>
-          );
-        } else {
+        if (item.href === '#sobre') {
           return (
             <Menu as="div" className="relative" key={item.href}>
               <div
@@ -81,6 +70,72 @@ export const Desktop = () => {
                 </Menu.Items>
               </Transition>
             </Menu>
+          );
+        } else if (item.href === '#saiba-mais') {
+          return (
+            <Menu as="div" className="relative" key={item.href}>
+              <div
+                key={item.href}
+                className={`flex gap-4 cursor-pointer border-transparent border-b-2 hover:border-lightPurple text-xl`}
+              >
+                <Menu.Button className="flex">
+                  <p className="text-lightPurple whitespace-nowrap">{item.name}</p>
+                  <CaretDown size={20} weight="fill" className="self-center fill-lightPurple" />
+                </Menu.Button>
+              </div>
+              <Transition
+                as={Fragment}
+                enter="transition ease-out duration-100"
+                enterFrom="transform opacity-0 scale-95"
+                enterTo="transform opacity-100 scale-100"
+                leave="transition ease-in duration-75"
+                leaveFrom="transform opacity-100 scale-100"
+                leaveTo="transform opacity-0 scale-95"
+              >
+                <Menu.Items
+                  className="absolute -right-24 mt-2 w-56 origin-top-right 
+                 rounded-md bg-[#f0f0f0] border border-lightPurple  shadow-md focus:outline-none"
+                >
+                  <Menu.Item>
+                    {({ active }) => (
+                      <Link href="#instagram">
+                        <button
+                          className={`${
+                            active ? 'bg-lightPurple text-white' : 'text-lightPurple'
+                          } group flex w-full items-center rounded-md px-2 py-2 text-xl transition-all`}
+                        >
+                          Instagram
+                        </button>
+                      </Link>
+                    )}
+                  </Menu.Item>
+                  <Menu.Item>
+                    {({ active }) => (
+                      <Link href="https://fonoana-blog.vercel.app/" target="_blank">
+                        <button
+                          className={`${
+                            active ? 'bg-lightPurple text-white' : 'text-lightPurple'
+                          } group flex w-full items-center rounded-md px-2 py-2 text-xl transition-all`}
+                        >
+                          Blog
+                        </button>
+                      </Link>
+                    )}
+                  </Menu.Item>
+                </Menu.Items>
+              </Transition>
+            </Menu>
+          );
+        } else {
+          return (
+            <div
+              key={item.href}
+              className={`flex gap-4 cursor-pointer border-b-2 border-transparent hover:border-lightPurple text-xl`}
+            >
+              <Link href={item.href} className="px-3 py-1">
+                <p className="text-lightPurple whitespace-nowrap">{item.name}</p>
+              </Link>
+            </div>
           );
         }
       })}
