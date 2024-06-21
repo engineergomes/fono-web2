@@ -38,7 +38,7 @@ export const Desktop = () => {
                 leaveTo="transform opacity-0 scale-95"
               >
                 <Menu.Items
-                  className="absolute -right-24 mt-2 w-56 origin-top-right 
+                  className="absolute -right-2 mt-2 w-44 origin-top-right
                  rounded-md bg-[#f0f0f0] border border-lightPurple  shadow-md focus:outline-none"
                 >
                   <Menu.Item>
@@ -47,7 +47,7 @@ export const Desktop = () => {
                         <button
                           className={`${
                             active ? 'bg-lightPurple text-white' : 'text-lightPurple'
-                          } group flex w-full items-center rounded-md px-2 py-2 text-xl transition-all`}
+                          } group flex w-full items-center rounded-md px-2 py-2 text-xl transition-all justify-end pr-3`}
                         >
                           Sobre mim
                         </button>
@@ -60,7 +60,7 @@ export const Desktop = () => {
                         <button
                           className={`${
                             active ? 'bg-lightPurple text-white' : 'text-lightPurple'
-                          } group flex w-full items-center rounded-md px-2 py-2 text-xl transition-all`}
+                          } group flex w-full items-center rounded-md px-2 py-2 text-xl transition-all justify-end pr-3`}
                         >
                           Horários
                         </button>
@@ -93,7 +93,7 @@ export const Desktop = () => {
                 leaveTo="transform opacity-0 scale-95"
               >
                 <Menu.Items
-                  className="absolute -right-24 mt-2 w-56 origin-top-right 
+                  className="absolute -right-2 mt-2 w-44 origin-top-right 
                  rounded-md bg-[#f0f0f0] border border-lightPurple  shadow-md focus:outline-none"
                 >
                   <Menu.Item>
@@ -102,7 +102,7 @@ export const Desktop = () => {
                         <button
                           className={`${
                             active ? 'bg-lightPurple text-white' : 'text-lightPurple'
-                          } group flex w-full items-center rounded-md px-2 py-2 text-xl transition-all`}
+                          } group flex w-full items-center rounded-md px-2 py-2 text-xl transition-all justify-end pr-3`}
                         >
                           Instagram
                         </button>
@@ -115,7 +115,7 @@ export const Desktop = () => {
                         <button
                           className={`${
                             active ? 'bg-lightPurple text-white' : 'text-lightPurple'
-                          } group flex w-full items-center rounded-md px-2 py-2 text-xl transition-all`}
+                          } group flex w-full items-center rounded-md px-2 py-2 text-xl transition-all justify-end pr-3`}
                         >
                           Blog
                         </button>
