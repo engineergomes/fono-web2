@@ -4,7 +4,7 @@ export function Whatsapp() {
   return (
     <>
       <a
-        href="https://wa.me/5548984727432"
+        href="https://wa.me/5547997775008"
         target="_blank"
         rel="noreferrer"
         className="shaking bg-[#25D366] rounded-full hover:pr-6 text-white whatsapp-button items-center flex group fixed bottom-10 
