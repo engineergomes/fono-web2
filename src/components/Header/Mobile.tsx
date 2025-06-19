@@ -85,7 +85,7 @@ export const Mobile = () => {
                     );
                   }
                 })}
-                <Link href={'https://fonoana-blog.vercel.app/'} target="_blank">
+                <Link href="/blog">
                   <Popover.Button
                     className={`text-xl font-semibold flex items-center justify-center py-4 w-full px-20 text-lightPurple 
                         `}

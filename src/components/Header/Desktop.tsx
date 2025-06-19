@@ -111,7 +111,7 @@ export const Desktop = () => {
                   </Menu.Item>
                   <Menu.Item>
                     {({ active }) => (
-                      <Link href="https://fonoana-blog.vercel.app/" target="_blank">
+                      <Link href="/blog">
                         <button
                           className={`${
                             active ? 'bg-lightPurple text-white' : 'text-lightPurple'

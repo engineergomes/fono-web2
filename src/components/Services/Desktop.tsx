@@ -36,9 +36,9 @@ export const Desktop = () => {
     <>
       <div className="flex justify-center" ref={ref}>
         <div
-          className="flex border-2 border-lightBlue border-dashed rounded-full
-       justify-between font-semibold text-xl gap-x-16 select-none
-       items-center p-1"
+          className="flex flex-wrap border-2 border-lightBlue border-dashed rounded-full
+       justify-center font-semibold select-none
+       items-center p-4 max-w-[1200px]"
         >
           {Object.values(services).map((service, index) => {
             return (
