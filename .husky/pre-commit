@@ -7,10 +7,10 @@ echo 'please be patient, this may take a while...'
 bun lint ||
 (
     echo '🔨❌ Yoo, you have a problem in your code. Check linter 🔨❌
-          Run 'npm run lint', add changes and try commit again.';
+          Run 'bun run lint', add changes and try commit again.';
     false;
 )
 
 echo '🎉 No error found: committing this now.... ✨🚀🏄‍♂️🍻'
 
-npx lint-staged
+bunx lint-staged

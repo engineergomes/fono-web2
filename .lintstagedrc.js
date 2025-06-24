@@ -1,15 +1,15 @@
 const config = {
   // Type check TypeScript files
-  '**/*.(ts|tsx)': () => 'npx tsc --noEmit',
+  '**/*.(ts|tsx)': () => 'bunx tsc --noEmit',
 
   // Lint & Prettify TS and JS files
   '**/*.(ts|tsx|js)': (filenames) => [
-    `npx eslint ${filenames.join(' ')}`,
-    `npx prettier --write ${filenames.join(' ')}`,
+    `bunx eslint ${filenames.join(' ')}`,
+    `bunx prettier --write ${filenames.join(' ')}`,
   ],
 
   // Prettify only Markdown and JSON files
-  '**/*.(md|json)': (filenames) => `npx prettier --write ${filenames.join(' ')}`,
+  '**/*.(md|json)': (filenames) => `bunx prettier --write ${filenames.join(' ')}`,
 };
 
 module.exports = config;
