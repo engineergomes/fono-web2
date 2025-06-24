@@ -5,7 +5,6 @@ import { OpenHours } from '@/components/OpenHours/OpenHours';
 import { Header } from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Instagram } from '@/components/Instagram';
-import UrlProvider from '@/providers/UrlProvider';
 import Head from 'next/head';
 
 export default function Home() {
