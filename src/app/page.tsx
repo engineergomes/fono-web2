@@ -1,14 +1,8 @@
 'use client';
 
-import { useRouter } from 'next/navigation';
-import { useEffect } from 'react';
+import { useRedirect } from '@/hooks/use-redirect';
 
 export default function Home() {
-  const router = useRouter();
-
-  useEffect(() => {
-    router.push('/fonoaudiologa-juaragua-sul');
-  }, []); // Isso garante que o redirecionamento ocorra apenas uma vez, na montagem do componente
-
+  useRedirect();
   return <></>;
 }

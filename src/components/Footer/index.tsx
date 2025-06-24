@@ -12,11 +12,11 @@ export default function Footer() {
         className="w-full bg-lightGreen bg-paper relative text-sm h-[110%] text-blue-950 shadow-md py-7 px-2 sm:py-14"
       >
         <Container className="py-10">
-          <div className="flex flex-col xl:grid grid-cols-1 xl:grid-cols-3 w-full justify-center items-center gap-x-4 gap-y-8">
-            <div className="flex flex-col items-center justify-center lg:justify-start lg:items-start gap-y-4 sm:gap-y-8">
+          <div className="flex flex-col lg:grid grid-cols-1 lg:grid-cols-3 w-full justify-center items-center gap-x-4 gap-y-8">
+            <div className="flex flex-col items-center justify-center  gap-y-4 sm:gap-y-8">
               <Image src="/logo-full-text-black.webp" alt="Logo" width={300} height={200} />
             </div>
-            <div className="flex flex-col items-center justify-center lg:justify-start lg:items-start gap-y-3 sm:gap-y-4 w-full">
+            <div className="flex flex-col items-center justify-center  gap-y-3 sm:gap-y-4 w-full">
               <h2 className="font-semibold text-xl">Contatos</h2>
               <div className="grid grid-rows-3 gap-y-4">
                 <Link
@@ -87,7 +87,7 @@ export default function Footer() {
                 </Link>
               </div>
             </div>
-            <div className="flex flex-col items-center justify-center lg:justify-start lg:items-start gap-y-4 sm:gap-y-8">
+            <div className="flex flex-col items-center justify-center  gap-y-4 sm:gap-y-8">
               <div className="max-w-sm min-w-[250px] flex flex-col p-3 bg-lightBlue rounded-2xl bg-paper shadow-md">
                 <div className="border-2 p-5 border-dashed bg-lightBlue rounded-2xl flex flex-col gap-y-2 bg-paper">
                   <h2 className="text-center text-2xl font-semibold">Horários</h2>

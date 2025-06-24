@@ -13,7 +13,6 @@
     "@headlessui/react": "^1.7.16",
     "autoprefixer": "^10.4.15",
     "axios": "^1.5.0",
-    "hangul-chosung-search": "^1.0.2",
     "next": "13.4.16",
     "notion-client": "^7.3.0",
     "phosphor-react-sc": "^1.0.0",
@@ -25,8 +24,6 @@
     "react-gtm-module": "^2.0.11",
     "react-icons": "^5.5.0",
     "react-intersection-observer": "^9.5.2",
-    "react-paginate": "^8.3.0",
-    "recoil": "^0.7.7",
     "swiper": "^10.3.0"
   },
   "devDependencies": {

@@ -52,7 +52,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html className={`scroll-smooth ${montserrat.variable}`} lang="pt_BR">
-      <body className="scroll-smooth w-screen overflow-x-hidden pt-20 lg:pt-24">
+      <body className="scroll-smooth w-screen overflow-x-hidden ">
         {children}
         <Whatsapp />
       </body>

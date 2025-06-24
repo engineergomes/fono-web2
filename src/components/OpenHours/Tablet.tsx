@@ -1,22 +1,7 @@
-import { useUrl } from '@/providers/UrlProvider';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useEffect } from 'react';
-import { useInView } from 'react-intersection-observer';
 
 export const Tablet = () => {
-  const { currentUrl, setCurrentUrl } = useUrl();
-
-  const { ref, inView, entry } = useInView({
-    /* Optional options */
-    threshold: 0.51,
-  });
-
-  useEffect(() => {
-    if (inView) {
-      setCurrentUrl('#horarios');
-    }
-  }, [inView, setCurrentUrl]);
   return (
     <>
       <div

@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowDown, ArrowRight } from 'phosphor-react-sc';
+import { ArrowDown } from 'phosphor-react-sc';
 import Container from './Container';
 import { useWindow } from '@/hooks/useWindow';
 

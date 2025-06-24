@@ -50,27 +50,27 @@ export const Desktop = () => {
             target="_blank"
             rel="noreferer"
             href={'https://wa.me/5547997775008'}
-            className="cta-button flex justify-center items-center w-1/2 gap-3 rounded-3xl py-3 px-12 text-white mt-8 bg-strongYellow 
-            text-lg bg-paper shadow-md transition-all hover:shadow-2xl whatsapp-button"
+            className="cta-button flex justify-center items-center w-fit gap-3 rounded-3xl py-3 px-12 text-white mt-8 bg-strongYellow 
+            text-lg bg-paper shadow-md transition-all hover:shadow-2xl whatsapp-button whitespace-nowrap"
           >
             <p>Agende Uma Visita</p>
             <WhatsIcon className="w-10" />
           </Link>
         </div>
       </div>
-      <div className="text-darkBlue bg-white bg-paper w-screen pt-20 pb-24 justify-center flex gap-x-16 relative px-10 shadow-lg z-[4]">
-        <div className="flex gap-x-3 items-center">
+      <div className="text-darkBlue bg-white bg-paper w-full pt-10 pb-12 xl:pt-20 xl:pb-24 justify-between flex relative px-10 shadow-lg z-[4]">
+        <div className="flex flex-col gap-x-3 items-center justify-center">
           <MapPin size={50} />
-          <div className="flex flex-col gap-y-2 w-72 [&>p]:text-sm">
+          <div className="flex flex-col gap-y-2 w-full [&>p]:text-sm items-center justify-center text-center">
             <h3>Consultório Acessível</h3>
             <p>
               Estamos localizados no centro de Jaraguá do Sul, oferecendo ambiente acolhedor para crianças e famílias.
             </p>
           </div>
         </div>
-        <div className="flex gap-x-3 items-center">
+        <div className="flex flex-col gap-x-3 items-center justify-center">
           <Heart size={60} />
-          <div className="flex flex-col gap-y-2 w-72 [&>p]:text-sm">
+          <div className="flex flex-col gap-y-2 w-full [&>p]:text-sm items-center justify-center text-center">
             <h3>Abordagem Humanizada</h3>
             <p>
               Experiência em atender crianças e famílias com intervenção fonoaudiológica, combinando especialização e
@@ -78,9 +78,9 @@ export const Desktop = () => {
             </p>
           </div>
         </div>
-        <div className="flex gap-x-3 items-center">
+        <div className="flex flex-col gap-x-3 items-center justify-center">
           <Fingerprint size={60} />
-          <div className="flex flex-col gap-y-2 w-72 [&>p]:text-sm">
+          <div className="flex flex-col gap-y-2 w-full [&>p]:text-sm items-center justify-center text-center">
             <h3>Acompanhamento Individualizado</h3>
             <p>
               Acompanhamento personalizado para cada criança, adaptando sessões às suas necessidades e ritmo de

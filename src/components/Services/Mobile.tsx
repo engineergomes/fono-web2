@@ -1,29 +1,14 @@
 import { Disclosure, Transition } from '@headlessui/react';
-import { CaretDown, CaretUp, Pencil } from 'phosphor-react-sc';
+import { CaretUp, Pencil } from 'phosphor-react-sc';
 import Image from 'next/image';
 import { services } from './data';
-import { useInView } from 'react-intersection-observer';
-import { useUrl } from '@/providers/UrlProvider';
-import { useEffect } from 'react';
+
 import React from 'react';
 
 export const Mobile = () => {
-  const { ref, inView, entry } = useInView({
-    /* Optional options */
-    threshold: 0.5,
-  });
-
-  const { currentUrl, setCurrentUrl } = useUrl();
-
-  useEffect(() => {
-    if (inView) {
-      setCurrentUrl('#servicos');
-    }
-  }, [inView, setCurrentUrl]);
-
   return (
     <>
-      <div className="w-full p-2 flex items-center justify-center" ref={ref}>
+      <div className="w-full p-2 flex items-center justify-center">
         <div className=" w-full max-w-md  sm:max-w-lg md:max-w-2xl rounded-2xl py-10 px-4 md:px-8 md:py-10 bg-white bg-paper flex flex-col gap-y-8">
           {Object.values(services).map((service, index) => {
             return (
