@@ -2,6 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Line clamp utilities for blog posts */
+@layer utilities {
+  .line-clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  .line-clamp-3 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+}
+
 body {
   font-family: var(--font-montserrat);
   background-image: url('/clean-gray-paper.webp');
@@ -79,4 +96,56 @@ html {
 
 .bg-paper {
   background-image: url('/clean-gray-paper.webp');
+}
+
+/* Blog Content Styles */
+.blog-content h2 {
+  @apply text-2xl font-bold text-darkBlue mt-8 mb-4;
+}
+
+.blog-content h3 {
+  @apply text-xl font-semibold text-darkBlue mt-6 mb-3;
+}
+
+.blog-content p {
+  @apply mb-4 text-gray-700 leading-relaxed;
+}
+
+.blog-content ul {
+  @apply mb-4 ml-6 space-y-2;
+}
+
+.blog-content li {
+  @apply text-gray-700 list-disc;
+}
+
+.blog-content a {
+  @apply text-lightBlue hover:text-darkBlue underline transition-colors duration-300;
+}
+
+.blog-content blockquote {
+  @apply border-l-4 border-lightBlue pl-4 italic text-lightGray bg-gray-50 py-2 my-4;
+}
+
+.blog-content code {
+  @apply bg-gray-100 px-2 py-1 rounded text-sm;
+}
+
+.blog-content pre {
+  @apply bg-gray-800 text-white p-4 rounded-lg overflow-x-auto my-4;
+}
+
+/* Line clamp utilities */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }

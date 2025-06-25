@@ -8,6 +8,10 @@ export const navigation = [
     href: '#sobre',
   },
   {
+    name: 'Blog',
+    href: '/blog',
+  },
+  {
     name: 'Saiba mais',
     href: '#saiba-mais',
   },

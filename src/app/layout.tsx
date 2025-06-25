@@ -3,6 +3,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Montserrat } from 'next/font/google';
 import Script from 'next/script';
+import { ReactQueryProvider } from '@/providers/ReactQueryProvider';
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -52,29 +53,31 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html className={`scroll-smooth ${montserrat.variable}`} lang="pt_BR">
-      <body className="scroll-smooth w-screen overflow-x-hidden ">
-        {children}
-        <Whatsapp />
+      <body className="scroll-smooth w-screen overflow-x-hidden">
+        <ReactQueryProvider>
+          {children}
+          <Whatsapp />
+        </ReactQueryProvider>
+        <Script id="schema" type="application/ld+json" defer>
+          {`{
+            "@context": "http://schema.org",
+            "@type": "ProfessionalService",
+            "name": "Fono Ana",
+            "description": "Fonoaudióloga Ana Nascimento | Jaragua do Sul",
+            "url": "https://www.fonoana.com.br/",
+            "logo": "https://www.fonoana.com.br/logo-small-nobg.png",
+            "telephone": "+55 (47) 99777-5008",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "R. Guilherme Dancker",
+              "addressLocality": "Jaragua do Sul",
+              "addressRegion": "SC",
+              "postalCode": "89251-460",
+              "addressCountry": "BR"
+            }
+          }`}
+        </Script>
       </body>
-      <Script id="schema" type="application/ld+json" defer>
-        {`
-  "@context": "http://schema.org",
-  "@type": "ProfessionalService",
-  "name": "Fono Ana",
-  "description": "Fonoaudióloga Ana Nascimento | Jaragua do Sul",
-  "url": "https://www.fonoana.com.br/",
-  "logo": "https://www.fonoana.com.br/logo-small-nobg.png",
-  "telephone": "+55 (47) 99777-5008",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "R. Guilherme Dancker",
-    "addressLocality": "Jaragua do Sul",
-    "addressRegion": "SC",
-    "postalCode": "89251-460",
-    "addressCountry": "BR"
-  }
-`}
-      </Script>
     </html>
   );
 }
