@@ -1,9 +1,6 @@
 'use client';
-
-import { Header } from '@/components/Header';
-import Footer from '@/components/Footer';
 import Container from '@/components/Container';
-import UrlProvider from '@/providers/UrlProvider';
+
 import { useBlog } from '@/context/BlogContext';
 import { urlFor, extractTextFromBlocks } from '@/libs/sanity';
 import { PortableTextRenderer } from '@/components/Blog/PortableTextRenderer';
@@ -152,13 +149,9 @@ function ClientBlogPost() {
 export default function BlogPostPage() {
   return (
     <main className="flex flex-col items-center justify-center scroll-smooth">
-      <UrlProvider>
-        <Header />
-        <Container className="px-4 py-8">
-          <ClientBlogPost />
-        </Container>
-        <Footer />
-      </UrlProvider>
+      <Container className="px-4 py-8">
+        <ClientBlogPost />
+      </Container>
     </main>
   );
 }

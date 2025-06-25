@@ -18,24 +18,15 @@ export const Tablet = () => {
         </div>
         <div className="absolute z-10">
           <div className="w-[170%] min-h-[12rem] flex flex-col p-3 bg-lightBlue rounded-2xl relative z-1 -right-[15rem] -top-[6rem]">
-            <div className="border-2 min-h-[12rem] p-5 border-dashed bg-lightBlue rounded-2xl flex flex-col gap-y-4">
+            <div className="border-2 p-5 border-dashed bg-lightBlue rounded-2xl flex flex-col gap-y-2 bg-paper text-darkBlue">
               <h2 className="text-center text-2xl font-semibold">Horários</h2>
-              <div className="flex flex-col gap-y-2 w-full">
-                <div className="flex gap-x-1">
-                  <p className="min-w-[5rem]">Seg - Sex</p>
-                  <div className="border-b border-dashed border-white w-full self-center h-1/2"></div>
-                  <p className="min-w-[5rem] text-center">Fechado</p>
-                </div>
-                <div className="flex gap-x-1">
-                  <p className="min-w-[5rem]">Seg - Sex</p>
-                  <div className="border-b border-dashed border-white w-full self-center h-1/2"></div>
-                  <p className="min-w-[5rem] text-center">Fechado</p>
-                </div>
-                <div className="flex gap-x-1">
-                  <p className="min-w-[5rem]">Seg - Sex</p>
-                  <div className="border-b border-dashed border-white w-full self-center h-1/2"></div>
-                  <p className="min-w-[5rem] text-center">Fechado</p>
-                </div>
+              <div className="gap-y-2 w-full min-w-[10rem] flex flex-col items-center justify-center">
+                <p className="flex-nowrap whitespace-nowrap">Segunda à Quinta</p>
+                <p className="flex-nowrap whitespace-nowrap text-center">Das 13h00 às 19h00</p>
+              </div>
+              <div className="gap-y-2 w-full min-w-[10rem] flex flex-col items-center justify-center">
+                <p className="flex-nowrap whitespace-nowrap">Sexta</p>
+                <p className="flex-nowrap whitespace-nowrap text-center">Das 09h00 às 17h00</p>
               </div>
             </div>
           </div>

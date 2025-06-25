@@ -114,7 +114,7 @@ export function BlogPost({ post }: BlogPostProps) {
             Agende uma consulta e receba orientação personalizada para o desenvolvimento do seu filho.
           </p>
           <Link
-            href="/#contato"
+            href="https://api.whatsapp.com/send/?phone=5547997775008&text&type=phone_number&app_absent=0"
             className="inline-block bg-lightBlue hover:bg-darkBlue text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-300"
           >
             Agendar Consulta

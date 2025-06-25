@@ -28,12 +28,15 @@ export const Mobile = () => {
           title="Intervenção Fonoaudióloga em Jaraguá do Sul - Consultório Acolhedor"
         />
         <div className="max-w-[500px] flex flex-col p-4 bg-lightBlue rounded-2xl items-center justify-center">
-          <div className="border-2 p-5 border-dashed bg-lightBlue rounded-2xl flex flex-col gap-y-2 text-darkBlue">
+          <div className="border-2 p-5 border-dashed bg-lightBlue rounded-2xl flex flex-col gap-y-2 bg-paper text-darkBlue">
             <h2 className="text-center text-2xl font-semibold">Horários</h2>
-            <div className=" gap-y-2 w-full min-w-[10rem] flex flex-col items-center justify-center">
-              <p className="flex-nowrap whitespace-nowrap">Segunda a Sexta</p>
-
-              <p className="flex-nowrap whitespace-nowrap text-center">Das 8h às 18h30</p>
+            <div className="gap-y-2 w-full min-w-[10rem] flex flex-col items-center justify-center">
+              <p className="flex-nowrap whitespace-nowrap">Segunda à Quinta</p>
+              <p className="flex-nowrap whitespace-nowrap text-center">Das 13h00 às 19h00</p>
+            </div>
+            <div className="gap-y-2 w-full min-w-[10rem] flex flex-col items-center justify-center">
+              <p className="flex-nowrap whitespace-nowrap">Sexta</p>
+              <p className="flex-nowrap whitespace-nowrap text-center">Das 09h00 às 17h00</p>
             </div>
           </div>
         </div>

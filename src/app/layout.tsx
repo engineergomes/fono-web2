@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 import { Montserrat } from 'next/font/google';
 import Script from 'next/script';
 import { ReactQueryProvider } from '@/providers/ReactQueryProvider';
+import GTMProvider from '@/providers/GTMProvider';
 
 const montserrat = Montserrat({
   subsets: ['latin'],
@@ -54,10 +55,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html className={`scroll-smooth ${montserrat.variable}`} lang="pt_BR">
       <body className="scroll-smooth w-screen overflow-x-hidden">
-        <ReactQueryProvider>
-          {children}
-          <Whatsapp />
-        </ReactQueryProvider>
+        <GTMProvider>
+          <ReactQueryProvider>
+            {children}
+            <Whatsapp />
+          </ReactQueryProvider>
+        </GTMProvider>
         <Script id="schema" type="application/ld+json" defer>
           {`{
             "@context": "http://schema.org",

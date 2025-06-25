@@ -22,7 +22,7 @@ export default function Footer() {
                 <Link
                   className="flex gap-5 items-center justify-start group"
                   href={
-                    'https://www.google.com/maps/place/R.+Guilherme+Dancker,+131+-+Centro,+Jaragu%C3%A1+do+Sul+-+SC,+89251-460/@-26.4928308,-49.0772724,17z/data=!3m1!4b1!4m6!3m5!1s0x94de951eaf5a3439:0x8a8b333557ac4a10!8m2!3d-26.4928308!4d-49.0772724!16s%2Fg%2F11f2t09lc3?entry=ttu'
+                    'https://www.google.com/maps/place/Fonoaudi%C3%B3loga+Ana+Nascimento/@-26.4857698,-49.0800154,17z/data=!3m1!4b1!4m6!3m5!1s0x94de95ecec96ade3:0xbaacef9443f462f0!8m2!3d-26.4857698!4d-49.0800154!16s%2Fg%2F11v66bl9zp?entry=ttu&g_ep=EgoyMDI1MDYyMi4wIKXMDSoASAFQAw%3D%3D'
                   }
                   target="_blank"
                 >
@@ -34,7 +34,7 @@ export default function Footer() {
                     className="transition-all group-hover:animate-bounce"
                   />
                   <p className="text-sm max-w-[250px]">
-                    R. Guilherme Dancker, 131 - Centro, Jaraguá do Sul - SC, 89251-460
+                    Rua João Marcatto, nº 260 - quarto andar, sala 401 Edifício Tower Center - Centro, Jaraguá do Sul
                   </p>
                 </Link>
                 <a
@@ -89,12 +89,15 @@ export default function Footer() {
             </div>
             <div className="flex flex-col items-center justify-center  gap-y-4 sm:gap-y-8">
               <div className="max-w-sm min-w-[250px] flex flex-col p-3 bg-lightBlue rounded-2xl bg-paper shadow-md">
-                <div className="border-2 p-5 border-dashed bg-lightBlue rounded-2xl flex flex-col gap-y-2 bg-paper">
+                <div className="border-2 p-5 border-dashed bg-lightBlue rounded-2xl flex flex-col gap-y-2 bg-paper text-darkBlue">
                   <h2 className="text-center text-2xl font-semibold">Horários</h2>
-                  <div className=" gap-y-2 w-full min-w-[10rem] flex flex-col items-center justify-center">
-                    <p className="flex-nowrap whitespace-nowrap">Segunda a Sexta</p>
-
-                    <p className="flex-nowrap whitespace-nowrap text-center">Das 8h às 18h30</p>
+                  <div className="gap-y-2 w-full min-w-[10rem] flex flex-col items-center justify-center">
+                    <p className="flex-nowrap whitespace-nowrap">Segunda à Quinta</p>
+                    <p className="flex-nowrap whitespace-nowrap text-center">Das 13h00 às 19h00</p>
+                  </div>
+                  <div className="gap-y-2 w-full min-w-[10rem] flex flex-col items-center justify-center">
+                    <p className="flex-nowrap whitespace-nowrap">Sexta</p>
+                    <p className="flex-nowrap whitespace-nowrap text-center">Das 09h00 às 17h00</p>
                   </div>
                 </div>
               </div>
