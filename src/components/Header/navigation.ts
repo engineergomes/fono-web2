@@ -12,10 +12,10 @@ export const navigation = [
     name: 'Serviços',
     href: '#servicos',
   },
-  // {
-  //   name: 'Blog',
-  //   href: '/blog',
-  // },
+  {
+    name: 'Blog',
+    href: '/blog',
+  },
   {
     name: 'Contato',
     href: '#contato',
