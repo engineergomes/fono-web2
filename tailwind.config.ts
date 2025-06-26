@@ -23,6 +23,7 @@ const config: Config = {
         lightYellow: 'rgba(255, 200, 91, 1)',
         strongYellow: '#FFBD59',
         lightGreen: '#d9ecda',
+        accessibleBlue: '#1E6091',
       },
       colors: {
         lightBlue: '#45B3DF',
@@ -32,6 +33,7 @@ const config: Config = {
         lightGray: '#70747F',
         strongYellow: '#FFBD59',
         lightGreen: '#d9ecda',
+        accessibleBlue: '#1E6091',
       },
     },
   },

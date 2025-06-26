@@ -26,11 +26,11 @@ export default function BlogNotFound() {
               </Link>
 
               <div className="text-sm">
-                <Link href="/blog/buscar" className="text-lightBlue hover:text-darkBlue underline">
+                <Link href="/blog/buscar" className="text-accessibleBlue hover:text-darkBlue underline">
                   Buscar artigos
                 </Link>
                 {' ou '}
-                <Link href="/#contato" className="text-lightBlue hover:text-darkBlue underline">
+                <Link href="/#contato" className="text-accessibleBlue hover:text-darkBlue underline">
                   entrar em contato
                 </Link>
               </div>

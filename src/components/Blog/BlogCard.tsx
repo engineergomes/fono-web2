@@ -56,7 +56,7 @@ export function BlogCard({ post }: BlogCardProps) {
           <time className="text-sm text-lightGray">{formatDate(post.publishedAt)}</time>
           <Link
             href={`/blog/${post.slug}`}
-            className="text-lightBlue hover:text-darkBlue font-semibold text-sm transition-colors duration-300"
+            className="text-accessibleBlue hover:text-darkBlue font-semibold text-sm transition-colors duration-300"
           >
             Ler mais →
           </Link>

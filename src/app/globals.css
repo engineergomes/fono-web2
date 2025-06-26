@@ -17,12 +17,33 @@
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
   }
+
+  /* Layout shift prevention utilities */
+  .loading-container {
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .content-container {
+    min-height: 200px;
+    transition: opacity 0.3s ease-in-out;
+  }
+
+  .no-layout-shift {
+    contain: layout;
+    will-change: contents;
+  }
 }
 
 body {
   font-family: var(--font-montserrat);
   background-image: url('/clean-gray-paper.webp');
   background-color: #fff;
+  /* Prevent layout shifts by ensuring consistent font sizing */
+  font-size-adjust: 0.5;
   /* font-weight: 900;   esse estilo aqui aplica o font weight para todo o projeto */
 }
 
@@ -120,7 +141,7 @@ html {
 }
 
 .blog-content a {
-  @apply text-lightBlue hover:text-darkBlue underline transition-colors duration-300;
+  @apply text-accessibleBlue hover:text-darkBlue underline transition-colors duration-300;
 }
 
 .blog-content blockquote {
@@ -156,4 +177,19 @@ article h1,
 aside h1,
 nav h1 {
   font-size: inherit;
+}
+
+/* Prevent layout shifts from font loading */
+@font-face {
+  font-family: 'Montserrat';
+  font-display: swap;
+  size-adjust: 100%;
+}
+
+/* Improve font loading and prevent layout shifts */
+.font-montserrat {
+  font-optical-sizing: auto;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }

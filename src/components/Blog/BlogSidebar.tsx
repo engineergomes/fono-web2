@@ -94,12 +94,12 @@ export function BlogSidebar() {
       </div>
 
       {/* Call to Action */}
-      <div className="bg-gradient-to-br from-lightBlue to-lightPurple rounded-lg p-6 text-white text-center">
+      <div className=" bg-lightBlue bg-paper rounded-lg p-6 text-white text-center">
         <h3 className="text-lg font-bold mb-3">Precisa de Ajuda?</h3>
         <p className="text-sm opacity-90 mb-4">Agende uma consulta personalizada</p>
         <Link
           href="https://api.whatsapp.com/send/?phone=5547997775008&text&type=phone_number&app_absent=0"
-          className="inline-block bg-white text-lightBlue font-semibold py-2 px-4 rounded-lg hover:bg-gray-100 transition-colors duration-300"
+          className="inline-block bg-white text-accessibleBlue font-semibold py-2 px-4 rounded-lg hover:bg-gray-100 hover:text-darkBlue transition-colors duration-300"
         >
           Agendar Consulta
         </Link>

@@ -52,25 +52,25 @@ export default function NotFound() {
                 <div className="flex flex-wrap justify-center gap-4">
                   <Link
                     href="/fonoaudiologa-jaragua-sul#servicos"
-                    className="text-lightBlue hover:text-darkBlue font-medium"
+                    className="text-accessibleBlue hover:text-darkBlue font-medium"
                   >
                     Nossos Serviços
                   </Link>
                   <Link
                     href="/fonoaudiologa-jaragua-sul#sobre"
-                    className="text-lightBlue hover:text-darkBlue font-medium"
+                    className="text-accessibleBlue hover:text-darkBlue font-medium"
                   >
                     Sobre a Dra. Ana
                   </Link>
                   <Link
                     href="/fonoaudiologa-jaragua-sul#contato"
-                    className="text-lightBlue hover:text-darkBlue font-medium"
+                    className="text-accessibleBlue hover:text-darkBlue font-medium"
                   >
                     Contato
                   </Link>
                   <Link
                     href="/fonoaudiologa-jaragua-sul#horarios"
-                    className="text-lightBlue hover:text-darkBlue font-medium"
+                    className="text-accessibleBlue hover:text-darkBlue font-medium"
                   >
                     Horários
                   </Link>

@@ -55,7 +55,7 @@ export function BlogHero() {
           >
             Blog
           </h1>
-          <p className="text-lg md:text-xl opacity-90 max-w-2xl mx-auto mb-8">
+          <p className="text-lg md:text-xl opacity-90 max-w-2xl mx-auto mb-8 min-h-[3.5rem] flex items-center justify-center">
             Artigos, dicas e informações sobre fonoaudiologia, desenvolvimento infantil e muito mais para ajudar você e
             sua família!
           </p>
