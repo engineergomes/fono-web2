@@ -47,7 +47,14 @@ export function BlogHero() {
     <section className="bg-lightPurple w-full py-20 pt-32 bg-paper relative">
       <Container className="px-4">
         <div className="text-center text-white">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">Blog</h1>
+          <h1
+            className="text-4xl md:text-6xl font-bold mb-6"
+            style={{
+              fontSize: 'clamp(2.25rem, 4vw, 3.75rem)',
+            }}
+          >
+            Blog
+          </h1>
           <p className="text-lg md:text-xl opacity-90 max-w-2xl mx-auto mb-8">
             Artigos, dicas e informações sobre fonoaudiologia, desenvolvimento infantil e muito mais para ajudar você e
             sua família!

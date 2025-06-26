@@ -149,3 +149,11 @@ html {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+/* Fix for H1 tags in semantic elements deprecation warning */
+section h1,
+article h1,
+aside h1,
+nav h1 {
+  font-size: inherit;
+}
