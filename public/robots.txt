@@ -1,2 +1,9 @@
 User-agent: *
 Disallow: /api/
+Disallow: /blog/buscar
+
+# Allow all other pages
+Allow: /
+
+# Sitemap
+Sitemap: https://www.fonoana.com.br/sitemap.xml

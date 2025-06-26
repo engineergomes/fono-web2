@@ -9,7 +9,7 @@ export const Hero = () => {
       <div
         id="inicio"
         className="w-full flex flex-col md:flex-row sm:justify-center items-center scroll-mt-48
-      sm:scroll-mt-36 gap-x-7 pb-14 md:pb-32 font-semibold relative z-[6] bg-lightPurple bg-paper p-10 shadow-lg"
+      sm:scroll-mt-36 gap-x-7 pb-14 md:pb-32 font-semibold relative z-[6] bg-lightPurple bg-paper p-10 shadow-lg pt-32"
       >
         <div className="justify-items-start item-start flex-col flex gap-y-5 mt-1 sm:mt-5 ">
           <h2 className="bg-[#ef8d51] bg-paper w-fit px-4 py-1 rounded-md self-start text-sm sm:text-xl shadow-md">

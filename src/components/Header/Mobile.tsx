@@ -6,14 +6,11 @@ import { List, X } from 'phosphor-react-sc';
 import Image from 'next/image';
 import React, { useEffect } from 'react'; // Importe o useEffect
 import Container from '../Container';
-import { useUrl } from '@/providers/UrlProvider';
 import InstagramIcon from '@/assets/InstagramIcon';
 
 export const Mobile = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [menuOpen, setMenuOpen] = useState(false); // Estado para controlar se o menu está aberto
-
-  const { currentUrl, setCurrentUrl } = useUrl();
 
   useEffect(() => {
     if (menuOpen) {
@@ -30,7 +27,13 @@ export const Mobile = () => {
       <Popover as={React.Fragment}>
         <div className="flex w-full justify-center sm:justify-between items-center h-16 sm:h-20">
           <Link className="px-4" href="/">
-            <Image src={'/logo-full-text-black.webp'} alt={'logo'} width={300} height={70} />
+            <Image
+              src={'/logo-full-text-black.webp'}
+              alt={'Fonoaudióloga Ana Nascimento - Desenvolvimento Infantil em Jaraguá do Sul'}
+              width={300}
+              height={70}
+              priority
+            />
           </Link>
           <Popover.Button className={`h-full px-4 mr-4`} onClick={() => setMenuOpen(!menuOpen)}>
             {' '}
@@ -54,7 +57,12 @@ export const Mobile = () => {
                 <div className="flex-shrink-0">
                   <Link href="/" className="px-4">
                     <Popover.Button>
-                      <Image src={'/logo-full-text-black.webp'} alt={'logo'} width={260} height={70} />
+                      <Image
+                        src={'/logo-full-text-black.webp'}
+                        alt={'Fonoaudióloga Ana Nascimento - Desenvolvimento Infantil em Jaraguá do Sul'}
+                        width={260}
+                        height={70}
+                      />
                     </Popover.Button>
                   </Link>
                 </div>
@@ -74,8 +82,7 @@ export const Mobile = () => {
                     return (
                       <Link href={item.href} key={item.href}>
                         <Popover.Button
-                          className={`text-xl font-semibold flex items-center justify-center py-4 w-full px-20 
-                          ${item.href === currentUrl ? 'bg-lightPurple bg-paper rounded-full' : 'text-lightPurple'}
+                          className={`text-xl font-semibold flex items-center justify-center py-4 w-full px-20  hover:bg-lightPurple hover:bg-paper rounded-full
                         `}
                           onClick={() => setMenuOpen(!menuOpen)}
                         >
@@ -85,16 +92,13 @@ export const Mobile = () => {
                     );
                   }
                 })}
-                <Link href={'https://fonoana-blog.vercel.app/'} target="_blank">
-                  <Popover.Button
-                    className={`text-xl font-semibold flex items-center justify-center py-4 w-full px-20 text-lightPurple 
-                        `}
-                    onClick={() => setMenuOpen(!menuOpen)}
-                  >
-                    Blog
-                  </Popover.Button>
-                </Link>
-                <Link href="https://www.instagram.com/fonoananascimento/" target="_blank">
+
+                <Link
+                  href="https://www.instagram.com/fonoananascimento/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Siga a Fonoaudióloga Ana Nascimento no Instagram"
+                >
                   <Popover.Button
                     onClick={() => setMenuOpen(!menuOpen)}
                     className="rounded-full transition-all hover:shadow-lg hover:brightness-105"

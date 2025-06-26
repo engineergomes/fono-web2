@@ -3,8 +3,6 @@ import { SwiperSlide, Swiper } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import Link from 'next/link';
-import Image from 'next/image';
 import { useWindow } from '@/hooks/useWindow';
 
 const GoogleReviews: React.FC = () => {

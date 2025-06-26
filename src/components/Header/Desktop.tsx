@@ -11,8 +11,14 @@ export const Desktop = () => {
   return (
     <div className="items-center justify-between flex font-bold gap-x-8 px-5">
       <div>
-        <Link href="">
-          <Image src={'/logo-full-text-black.webp'} alt={'logo'} width={350} height={100} />
+        <Link href="/">
+          <Image
+            src={'/logo-full-text-black.webp'}
+            alt={'Fonoaudióloga Ana Nascimento - Desenvolvimento Infantil em Jaraguá do Sul'}
+            width={350}
+            height={100}
+            priority
+          />
         </Link>
       </div>
       {navigation.map((item) => {
@@ -111,7 +117,7 @@ export const Desktop = () => {
                   </Menu.Item>
                   <Menu.Item>
                     {({ active }) => (
-                      <Link href="https://fonoana-blog.vercel.app/" target="_blank">
+                      <Link href="/blog">
                         <button
                           className={`${
                             active ? 'bg-lightPurple text-white' : 'text-lightPurple'
@@ -143,14 +149,18 @@ export const Desktop = () => {
         <Link
           href="https://www.instagram.com/fonoananascimento/"
           target="_blank"
+          rel="noopener noreferrer"
           className="rounded-full transition-all hover:shadow-lg hover:brightness-105"
+          aria-label="Siga a Fonoaudióloga Ana Nascimento no Instagram"
         >
           <InstagramIcon className="w-10" />
         </Link>
         <Link
           href="https://wa.me/5547997775008"
           target="_blank"
+          rel="noopener noreferrer"
           className="cta-button rounded-full transition-all hover:shadow-lg hover:brightness-105"
+          aria-label="Entre em contato via WhatsApp com a Fonoaudióloga Ana Nascimento"
         >
           <WhatsIcon className="w-10 whatsapp-button" />
         </Link>

@@ -1,12 +1,10 @@
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import { ServicesInfo } from './ServicesInfo';
 import { ServicesType, services } from './data';
 import { Transition } from '@headlessui/react';
-import { useInView } from 'react-intersection-observer';
-import { useUrl } from '@/providers/UrlProvider';
 
 export const Desktop = () => {
-  const [showService, setShowService] = useState<ServicesType | ''>('linguagem');
+  const [showService, setShowService] = useState<ServicesType | ''>('terapias');
   const [aux, setAux] = useState<number>(1);
 
   const handleClick = (e: any) => {
@@ -18,27 +16,15 @@ export const Desktop = () => {
     }, 300);
   };
 
-  const serviceRef = useRef<ServicesType>('linguagem');
-
-  const { ref, inView, entry } = useInView({
-    threshold: 0.5,
-  });
-
-  const { currentUrl, setCurrentUrl } = useUrl();
-
-  useEffect(() => {
-    if (inView) {
-      setCurrentUrl('#servicos');
-    }
-  }, [inView, setCurrentUrl]);
+  const serviceRef = useRef<ServicesType>('terapias');
 
   return (
     <>
-      <div className="flex justify-center" ref={ref}>
+      <div className="flex justify-center px-4">
         <div
-          className="flex border-2 border-lightBlue border-dashed rounded-full
-       justify-between font-semibold text-xl gap-x-16 select-none
-       items-center p-1"
+          className="flex flex-wrap border-2 border-lightBlue border-dashed rounded-full
+       justify-center font-semibold select-none
+       items-center p-2 xl:p-4 max-w-[1200px] w-full"
         >
           {Object.values(services).map((service, index) => {
             return (
@@ -50,7 +36,7 @@ export const Desktop = () => {
                   return handleClick(target.id.toString());
                 }}
                 id={Object.keys(services).find((key) => services[key as ServicesType].name === service.name)}
-                className={`px-8 py-3 rounded-3xl whitespace-nowrap transition-all font-bold ${
+                className={`px-4 py-2 xl:px-8 xl:py-3 rounded-3xl whitespace-nowrap transition-all font-bold text-sm sm:text-base ${
                   aux === service.order ? 'bg-lightBlue text-white bg-paper' : 'text-white hover:brightness-110'
                 } `}
               >

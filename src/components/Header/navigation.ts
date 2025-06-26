@@ -7,14 +7,15 @@ export const navigation = [
     name: 'Sobre',
     href: '#sobre',
   },
-  {
-    name: 'Saiba mais',
-    href: '#saiba-mais',
-  },
+
   {
     name: 'Serviços',
     href: '#servicos',
   },
+  // {
+  //   name: 'Blog',
+  //   href: '/blog',
+  // },
   {
     name: 'Contato',
     href: '#contato',
