@@ -35,7 +35,11 @@ export const Mobile = () => {
               priority
             />
           </Link>
-          <Popover.Button className={`h-full px-4 mr-4`} onClick={() => setMenuOpen(!menuOpen)}>
+          <Popover.Button
+            className={`h-full px-4 mr-4`}
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Abrir menu de navegação"
+          >
             {' '}
             {/* Altere o estado do menu quando o botão for clicado */}
             <List className="w-8 h-8" />
@@ -56,7 +60,7 @@ export const Mobile = () => {
                 <div className="flex-grow"></div> {/* This takes up remaining space before the image */}
                 <div className="flex-shrink-0">
                   <Link href="/" className="px-4">
-                    <Popover.Button>
+                    <Popover.Button aria-label="Voltar à página inicial">
                       <Image
                         src={'/logo-full-text-black.webp'}
                         alt={'Fonoaudióloga Ana Nascimento - Desenvolvimento Infantil em Jaraguá do Sul'}
@@ -69,7 +73,11 @@ export const Mobile = () => {
                 <div className="flex-grow flex justify-end">
                   {' '}
                   {/* This takes up remaining space after the image and ensures the button is on the right */}
-                  <Popover.Button className="h-full pb-6 pt-2" onClick={() => setMenuOpen(false)}>
+                  <Popover.Button
+                    className="h-full pb-6 pt-2"
+                    onClick={() => setMenuOpen(false)}
+                    aria-label="Fechar menu de navegação"
+                  >
                     {/* Close the menu when the button is clicked */}
                     <X weight="bold" className="h-6 w-6 fill-lightPurple hover:fill-black/70" />
                   </Popover.Button>
@@ -102,6 +110,7 @@ export const Mobile = () => {
                   <Popover.Button
                     onClick={() => setMenuOpen(!menuOpen)}
                     className="rounded-full transition-all hover:shadow-lg hover:brightness-105"
+                    aria-label="Siga a Fonoaudióloga Ana Nascimento no Instagram"
                   >
                     <InstagramIcon className="w-10" />
                   </Popover.Button>
