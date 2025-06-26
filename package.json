@@ -12,15 +12,15 @@
   "dependencies": {
     "@headlessui/react": "^1.7.16",
     "@portabletext/react": "^3.2.1",
-    "@sanity/client": "^7.6.0",
+    "@sanity/client": "^6.15.7",
     "@sanity/image-url": "^1.1.0",
-    "@sanity/vision": "^3.94.2",
+    "@sanity/vision": "^3.42.1",
     "@tanstack/react-query": "^5.81.2",
     "@tanstack/react-query-devtools": "^5.81.2",
     "autoprefixer": "^10.4.15",
     "axios": "^1.5.0",
     "next": "13.4.16",
-    "next-sanity": "^9.12.0",
+    "next-sanity": "^7.1.4",
     "notion-client": "^7.3.0",
     "phosphor-react-sc": "^1.0.0",
     "placeholder": "^1.2.3",
@@ -31,7 +31,7 @@
     "react-gtm-module": "^2.0.11",
     "react-icons": "^5.5.0",
     "react-intersection-observer": "^9.5.2",
-    "sanity": "^3.94.2",
+    "sanity": "^3.42.1",
     "swiper": "^10.3.0"
   },
   "devDependencies": {
