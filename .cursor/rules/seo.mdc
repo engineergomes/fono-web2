@@ -1,0 +1,95 @@
+---
+description: >
+globs: 
+alwaysApply: true
+---
+
+## 🚀 SEO Rule (Google 2025 – Next.js Metadata)
+
+### 1. Rendering
+- Prefira **SSG/ISR** (`generateStaticParams`, `revalidate`) para páginas de marketing/blog.
+- Use **SSR** (`dynamic = "force-dynamic"` ou `getServerSideProps`) apenas quando necessário.
+- Garanta que conteúdo crítico esteja no HTML inicial; evite “render after hydration”.
+
+### 2. Metadata API
+```ts
+// Exemplo para página estática  ─ app/(marketing)/page.tsx
+export const metadata = {
+  title: "FastWidgets – High-Quality Widgets for Modern Homes",
+  description:
+    "FastWidgets oferece widgets de alta qualidade e preço acessível para modernizar sua casa.",
+  alternates: { canonical: "https://example.com" },
+  openGraph: {
+    title: "FastWidgets – High-Quality Widgets",
+    description: "Descubra por que nossos widgets são ideais para casas modernas.",
+    url: "https://example.com",
+    siteName: "FastWidgets",
+    images: [{ url: "https://example.com/og-cover.jpg", width: 1200, height: 630 }],
+    type: "website",
+  },
+  twitter: { card: "summary_large_image" },
+  robots: { index: true, follow: true },
+};
+ts
+Copiar
+Editar
+// Exemplo para página dinâmica ─ app/blog/[slug]/page.tsx
+import { getPost } from "@/lib/posts";
+export async function generateMetadata({ params }) {
+  const post = await getPost(params.slug);
+  return {
+    title: post.seoTitle ?? post.title,
+    description: post.excerpt,
+    alternates: { canonical: `https://example.com/blog/${post.slug}` },
+    openGraph: {
+      title: post.seoTitle ?? post.title,
+      description: post.excerpt,
+      url: `https://example.com/blog/${post.slug}`,
+      images: [{ url: post.coverImage, width: 1200, height: 630 }],
+      type: "article",
+    },
+  };
+}
+Nunca usar <meta name="keywords">.
+
+3. Semântica
+Um único <h1> por página; seguir hierarquia <h2>, <h3>.
+
+Utilizar <main>, <article>, <section>, <nav>, <footer>.
+
+Todas as imagens devem ter alt descritivo e significativo.
+
+4. Performance & Core Web Vitals
+Fonts via next/font com display:"swap".
+
+Imagens via next/image (lazy, width/height definidos).
+
+Componentes fora do viewport: next/dynamic({ ssr:false }).
+
+Scripts de terceiros: <Script strategy="lazyOnload" />.
+
+Metas: LCP < 2.5 s, INP < 200 ms, CLS < 0.1.
+
+5. URLs & Indexação
+Rotas curtas, em kebab-case (/blog/nextjs-seo-tips).
+
+Gerar public/sitemap.xml em cada build (com <lastmod>).
+
+robots.txt → Sitemap: https://example.com/sitemap.xml.
+
+6. Internal Links
+Âncoras descritivas (“ver planos de preços”, não “clique aqui”).
+
+Usar schema BreadcrumbList quando fizer sentido.
+
+7. CI Checks
+next lint + eslint-plugin-jsx-a11y.
+
+Executar Lighthouse/PSI no CI; falhar se CWV < “Good”.
+
+8. Proibições
+Não bloquear assets públicos em robots.txt.
+
+Não duplicar páginas sem <link rel="canonical">.
+
+Não embutir imagens grandes em base64.

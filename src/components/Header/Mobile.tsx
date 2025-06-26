@@ -27,7 +27,13 @@ export const Mobile = () => {
       <Popover as={React.Fragment}>
         <div className="flex w-full justify-center sm:justify-between items-center h-16 sm:h-20">
           <Link className="px-4" href="/">
-            <Image src={'/logo-full-text-black.webp'} alt={'logo'} width={300} height={70} />
+            <Image
+              src={'/logo-full-text-black.webp'}
+              alt={'Fonoaudióloga Ana Nascimento - Desenvolvimento Infantil em Jaraguá do Sul'}
+              width={300}
+              height={70}
+              priority
+            />
           </Link>
           <Popover.Button className={`h-full px-4 mr-4`} onClick={() => setMenuOpen(!menuOpen)}>
             {' '}
@@ -51,7 +57,12 @@ export const Mobile = () => {
                 <div className="flex-shrink-0">
                   <Link href="/" className="px-4">
                     <Popover.Button>
-                      <Image src={'/logo-full-text-black.webp'} alt={'logo'} width={260} height={70} />
+                      <Image
+                        src={'/logo-full-text-black.webp'}
+                        alt={'Fonoaudióloga Ana Nascimento - Desenvolvimento Infantil em Jaraguá do Sul'}
+                        width={260}
+                        height={70}
+                      />
                     </Popover.Button>
                   </Link>
                 </div>
@@ -82,7 +93,12 @@ export const Mobile = () => {
                   }
                 })}
 
-                <Link href="https://www.instagram.com/fonoananascimento/" target="_blank">
+                <Link
+                  href="https://www.instagram.com/fonoananascimento/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Siga a Fonoaudióloga Ana Nascimento no Instagram"
+                >
                   <Popover.Button
                     onClick={() => setMenuOpen(!menuOpen)}
                     className="rounded-full transition-all hover:shadow-lg hover:brightness-105"
